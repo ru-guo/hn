@@ -128,7 +128,7 @@ class Model_ExportClass
 				$statscla = Z::getsingleton( "model_statsclass" );
 				$plancla = Z::getsingleton( "model_planclass" );
 				$objPHPExcel = $this->objPHPExcel;
-				$objPHPExcel->setactivesheetindex( 0 )->setcellvalue( "A1", iconv( "gb2312", "utf-8", "日期" ) )->setcellvalue( "B1", iconv( "gb2312", "utf-8", "广告项目" ) )->setcellvalue( "C1", iconv( "gb2312", "utf-8", "浏览数" ) )->setcellvalue( "D1", iconv( "gb2312", "utf-8", "结算数" ) );
+				$objPHPExcel->setactivesheetindex( 0 )->setcellvalue( "A1", iconv( "gb2312", "gbk", "日期" ) )->setcellvalue( "B1", iconv( "gb2312", "gbk", "广告项目" ) )->setcellvalue( "C1", iconv( "gb2312", "gbk", "浏览数" ) )->setcellvalue( "D1", iconv( "gb2312", "gbk", "结算数" ) );
 				if ( $type == "a" )
 				{
 						$objPHPExcel->setactivesheetindex( 0 )->setcellvalue( "E1", "鐐瑰嚮閲" );

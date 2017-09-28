@@ -147,7 +147,7 @@ class PHPExcel_Writer_Excel2007_Theme extends PHPExcel_Writer_Excel2007_WriterPa
         }
 
         // XML header
-        $objWriter->startDocument('1.0', 'UTF-8', 'yes');
+        $objWriter->startDocument('1.0', 'gbk', 'yes');
 
         // a:theme
         $objWriter->startElement('a:theme');

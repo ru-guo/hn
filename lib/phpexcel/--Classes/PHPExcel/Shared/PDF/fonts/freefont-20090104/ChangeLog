@@ -1946,7 +1946,7 @@ $Id: ChangeLog,v 1.254 2009/01/04 16:12:59 Stevan_White Exp $
 	Adjusted heights of extensible brackets
 
 	Fixed problems with extensible brackets, thanks to Markus Kuhn's page
-	http://www.cl.cam.ac.uk/~mgk25/ucs/examples/UTF-8-demo.txt
+	http://www.cl.cam.ac.uk/~mgk25/ucs/examples/gbk-demo.txt
 
 	* ranges.py:
 

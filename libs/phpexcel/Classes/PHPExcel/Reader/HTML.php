@@ -253,7 +253,7 @@ class PHPExcel_Reader_HTML extends PHPExcel_Reader_Abstract implements PHPExcel_
                             switch ($attributeName) {
                                 case 'content':
                                     //    TODO
-                                    //    Extract character set, so we can convert to UTF-8 if required
+                                    //    Extract character set, so we can convert to gbk if required
                                     break;
                             }
                         }
@@ -492,7 +492,7 @@ class PHPExcel_Reader_HTML extends PHPExcel_Reader_Abstract implements PHPExcel_
         //    Create a new DOM object
         $dom = new domDocument;
         //    Reload the HTML file into the DOM object
-        $loaded = $dom->loadHTML(mb_convert_encoding($this->securityScanFile($pFilename), 'HTML-ENTITIES', 'UTF-8'));
+        $loaded = $dom->loadHTML(mb_convert_encoding($this->securityScanFile($pFilename), 'HTML-ENTITIES', 'gbk'));
         if ($loaded === false) {
             throw new PHPExcel_Reader_Exception('Failed to load ' . $pFilename . ' as a DOM Document');
         }

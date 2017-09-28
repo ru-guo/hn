@@ -47,7 +47,7 @@ class PHPExcel_Writer_Excel2007_Drawing extends PHPExcel_Writer_Excel2007_Writer
         }
 
         // XML header
-        $objWriter->startDocument('1.0', 'UTF-8', 'yes');
+        $objWriter->startDocument('1.0', 'gbk', 'yes');
 
         // xdr:wsDr
         $objWriter->startElement('xdr:wsDr');
@@ -388,7 +388,7 @@ class PHPExcel_Writer_Excel2007_Drawing extends PHPExcel_Writer_Excel2007_Writer
         }
 
         // XML header
-        $objWriter->startDocument('1.0', 'UTF-8', 'yes');
+        $objWriter->startDocument('1.0', 'gbk', 'yes');
 
         // Header/footer images
         $images = $pWorksheet->getHeaderFooter()->getImages();

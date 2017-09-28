@@ -48,7 +48,7 @@ class PHPExcel_Writer_OpenDocument_Settings extends PHPExcel_Writer_OpenDocument
         }
 
         // XML header
-        $objWriter->startDocument('1.0', 'UTF-8');
+        $objWriter->startDocument('1.0', 'gbk');
 
         // Settings
         $objWriter->startElement('office:document-settings');

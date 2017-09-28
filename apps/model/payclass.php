@@ -305,7 +305,7 @@ class Model_PayClass
 												$scale = $_POST['scale'];
 												$realmoney = $_POST['realmoney'];
 												$payinfo = $_POST['payinfo'];
-												$payinfo = iconv( "UTF-8", "gbk", $_POST['payinfo'] );
+												$payinfo = iconv( "gbk", "gbk", $_POST['payinfo'] );
 										}
 										else
 										{

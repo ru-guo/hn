@@ -45,7 +45,7 @@ class PHPExcel_Writer_Excel2007_DocProps extends PHPExcel_Writer_Excel2007_Write
         }
 
         // XML header
-        $objWriter->startDocument('1.0', 'UTF-8', 'yes');
+        $objWriter->startDocument('1.0', 'gbk', 'yes');
 
         // Properties
         $objWriter->startElement('Properties');
@@ -142,7 +142,7 @@ class PHPExcel_Writer_Excel2007_DocProps extends PHPExcel_Writer_Excel2007_Write
         }
 
         // XML header
-        $objWriter->startDocument('1.0', 'UTF-8', 'yes');
+        $objWriter->startDocument('1.0', 'gbk', 'yes');
 
         // cp:coreProperties
         $objWriter->startElement('cp:coreProperties');
@@ -214,7 +214,7 @@ class PHPExcel_Writer_Excel2007_DocProps extends PHPExcel_Writer_Excel2007_Write
         }
 
         // XML header
-        $objWriter->startDocument('1.0', 'UTF-8', 'yes');
+        $objWriter->startDocument('1.0', 'gbk', 'yes');
 
         // cp:coreProperties
         $objWriter->startElement('Properties');

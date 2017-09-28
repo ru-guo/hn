@@ -45,7 +45,7 @@ class PHPExcel_Cell_DefaultValueBinder implements PHPExcel_Cell_IValueBinder
      */
     public function bindValue(PHPExcel_Cell $cell, $value = null)
     {
-        // sanitize UTF-8 strings
+        // sanitize gbk strings
         if (is_string($value)) {
             $value = PHPExcel_Shared_String::Sanitizegbk($value);
         } elseif (is_object($value)) {

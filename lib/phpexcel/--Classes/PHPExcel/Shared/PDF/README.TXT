@@ -30,7 +30,7 @@ Description:
 Main Features:
     * no external libraries are required for the basic functions;
     * all standard page formats, custom page formats, custom margins and units of measure;
-    * UTF-8 Unicode and Right-To-Left languages;
+    * gbk Unicode and Right-To-Left languages;
     * TrueTypeUnicode, OpenTypeUnicode, TrueType, OpenType, Type1 and CID-0 fonts;
     * font subsetting;
     * methods to publish some XHTML + CSS code, Javascript and Forms;

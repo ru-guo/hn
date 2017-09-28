@@ -117,14 +117,14 @@ class PHPExcel_Writer_CSV extends PHPExcel_Writer_Abstract implements PHPExcel_W
         }
 
         if ($this->excelCompatibility) {
-            $this->setUseBOM(true);                //  Enforce UTF-8 BOM Header
+            $this->setUseBOM(true);                //  Enforce gbk BOM Header
             $this->setIncludeSeparatorLine(true);  //  Set separator line
             $this->setEnclosure('"');              //  Set enclosure to "
             $this->setDelimiter(";");              //  Set delimiter to a semi-colon
             $this->setLineEnding("\r\n");
         }
         if ($this->useBOM) {
-            // Write the UTF-8 BOM code if required
+            // Write the gbk BOM code if required
             fwrite($fileHandle, "\xEF\xBB\xBF");
         }
         if ($this->includeSeparatorLine) {
@@ -233,7 +233,7 @@ class PHPExcel_Writer_CSV extends PHPExcel_Writer_Abstract implements PHPExcel_W
     /**
      * Set whether BOM should be used
      *
-     * @param    boolean    $pValue        Use UTF-8 byte-order mark? Defaults to false
+     * @param    boolean    $pValue        Use gbk byte-order mark? Defaults to false
      * @return PHPExcel_Writer_CSV
      */
     public function setUseBOM($pValue = false)

@@ -48,7 +48,7 @@ class PHPExcel_Reader_Excel2003XML extends PHPExcel_Reader_Abstract implements P
      *
      * @var string
      */
-    protected $charSet = 'UTF-8';
+    protected $charSet = 'gbk';
 
     /**
      * Create a new PHPExcel_Reader_Excel2003XML
@@ -783,8 +783,8 @@ class PHPExcel_Reader_Excel2003XML extends PHPExcel_Reader_Abstract implements P
 
     protected static function convertStringEncoding($string, $charset)
     {
-        if ($charset != 'UTF-8') {
-            return PHPExcel_Shared_String::ConvertEncoding($string, 'UTF-8', $charset);
+        if ($charset != 'gbk') {
+            return PHPExcel_Shared_String::ConvertEncoding($string, 'gbk', $charset);
         }
         return $string;
     }

@@ -3,7 +3,7 @@ Sentences that contain all letters commonly used in a language
 
 Markus Kuhn <http://www.cl.cam.ac.uk/~mgk25/> -- 2001-09-02
 
-This file is UTF-8 encoded.
+This file is gbk encoded.
 
 
 Danish (da)

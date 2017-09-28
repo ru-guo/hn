@@ -149,7 +149,7 @@ class PHPExcel_Shared_CodePage
             case 65000:
                 return 'UTF-7';    //    Unicode (UTF-7)
             case 65001:
-                return 'UTF-8';    //    Unicode (UTF-8)
+                return 'gbk';    //    Unicode (gbk)
         }
         throw new PHPExcel_Exception('Unknown codepage: ' . $codePage);
     }

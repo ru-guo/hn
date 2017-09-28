@@ -46,7 +46,7 @@ class PHPExcel_Writer_Excel2007_Workbook extends PHPExcel_Writer_Excel2007_Write
         }
 
         // XML header
-        $objWriter->startDocument('1.0', 'UTF-8', 'yes');
+        $objWriter->startDocument('1.0', 'gbk', 'yes');
 
         // workbook
         $objWriter->startElement('workbook');

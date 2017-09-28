@@ -246,7 +246,7 @@
 - Bugfix:   (ET) Work item 10558 - Control characters 0x14-0x1F are not treated by PHPExcel
 - Bugfix:   (ET) Work item 10560 - PHPExcel_Writer_Excel5 not working when open_basedir restriction is in effect
 - Bugfix:   (MBaker) Work item 10563 - IF formula calculation problem in PHPExcel 1.7.0 (string comparisons)
-- Bugfix:   (MBaker) Improved CODE() Text function result for UTF-8 characters
+- Bugfix:   (MBaker) Improved CODE() Text function result for gbk characters
 - Bugfix:   (ET) Work item 10568 - Empty rows are collapsed with HTML/PDF writer
 - Bugfix:   (ET) Work item 10569 - Gaps between rows in output by PHPExcel_Writer_PDF (Upgrading to TCPDF 4.7.003)
 - Bugfix:   (ET) Work item 10575 - Problem reading formulas (Excel5 reader problem with "fake" shared formulas)
@@ -313,7 +313,7 @@
 - Feature:  (ET) Work item  9911 - Horizontal center across selection
 - Feature:  (ET) Work item  9919 - Merged cells record, write to full record size in PHPExcel_Writer_Excel5
 - Feature:  (MB) Work item  9895 - Add page break between sheets in exported PDF
-- Feature:  (ET) Work item  9902 - Sanitization of UTF-8 input for cell values
+- Feature:  (ET) Work item  9902 - Sanitization of gbk input for cell values
 - Feature:  (ET) Work item  9930 - Read cached calculated value with PHPExcel_Reader_Excel5
 - Feature:  (ET) Work item  9896 - Miscellaneous CSS improvements for PHPExcel_Writer_HTML
 - Feature:  (ET) Work item  9947 - getProperties: setCompany feature request
@@ -371,7 +371,7 @@
 - Bugfix:   (ET) Work item 10291 - Image horizontally stretched when default font size is increased (PHPExcel_Writer_Excel5)
 - Bugfix:   (ET) Work item 10333 - Undefined offset in Reader\Excel5.php on line 3572
 - Bugfix:   (MB) Work item 10340 - PDF output different then XLS (copied data)
-- Bugfix:   (ET) Work item 10352 - Internal hyperlinks with UTF-8 sheet names not working in PHPExcel_Writer_Excel5
+- Bugfix:   (ET) Work item 10352 - Internal hyperlinks with gbk sheet names not working in PHPExcel_Writer_Excel5
 - Bugfix:   (ET) Work item 10361 - String shared formula result read error with PHPExcel_Reader_Excel5
 - Bugfix:   (ET) Work item 10363 - Uncaught exception 'Exception' with message 'Valid scale is between 10 and 400.' in Classes/PHPExcel/Worksheet/PageSetup.php:338
 - Bugfix:   (ET) Work item 10355 - Using setLoadSheetsOnly fails if you do not use setReadDataOnly(true) and sheet is not the first sheet
@@ -401,7 +401,7 @@
             -    Fix for QUOTIENT() Mathematical function
             -    Fix to HOUR(), MINUTE() and SECOND() Date/Time functions to return an error when passing in a floating point value of 1.0 or greater, or less than 0
             -    LOG() Function now correctly returns base-10 log when called with only one parameter, rather than the natural log as the default base
-            -    Modified text functions to handle multibyte character set (UTF-8).
+            -    Modified text functions to handle multibyte character set (gbk).
 
 
 2009/04/22 (v1.6.7):
@@ -479,9 +479,9 @@ documentation for more information on entering dates into a cell.
 - Feature:  (MBaker, ET) Work item 8483 - Support for Excel 1904 calendar date mode (Mac)
 - Feature:  (ET) Work item 9194 - PHPExcel_Writer_Excel5 improvements writing shared strings table
 - Feature:  (ET) Work item 9248 - PHPExcel_Writer_Excel5 iconv fallback when mbstring extension is not enabled
-- Feature:  (ET) Work item 9253 - UTF-8 support in font names in PHPExcel_Writer_Excel5
+- Feature:  (ET) Work item 9253 - gbk support in font names in PHPExcel_Writer_Excel5
 - Feature:  (MB) Work item 9215 - Implement value binding architecture
-- Feature:  (MB) Work item 6742 - PDF writer not working with UTF-8
+- Feature:  (MB) Work item 6742 - PDF writer not working with gbk
 - Feature:  (ET) Work item 9355 - Eliminate duplicate style entries in multisheet workbook written by PHPExcel_Writer_Excel5
 - Bugfix:   (ET) Work item 8810 - Redirect to client browser fails due to trailing white space in class definitions
 - Bugfix:   (MB) Work item 8816 - Spurious column dimension element introduced in blank worksheet after using PHPExcel_Writer_Excel2007
@@ -517,7 +517,7 @@ documentation for more information on entering dates into a cell.
 - General:  (MB) Applied patch from work item 8073 - Optimise Shared Strings
 - General:  (MB) Applied patch from work item 8074 - Optimise Cell Sorting
 - General:  (MB) Applied patch from work item 8075 - Optimise Style Hashing
-- General:  (ET) Applied patch from work item 8245 - UTF-8 enhancements
+- General:  (ET) Applied patch from work item 8245 - gbk enhancements
 - General:  (ET) Applied patch from work item 8283 - PHPExcel_Writer_HTML validation errors against strict HTML 4.01 / CSS 2.1
 - General:  (MB) Documented work items 6203 and 8110 in manual
 - General:  (ET) Restructure package hierachy so classes can be found more easily in auto-generated API (from work item 8468)
@@ -561,7 +561,7 @@ documentation for more information on entering dates into a cell.
 - Bugfix:   (ET) Work item 8320 - MS Outlook corrupts files generated by PHPExcel_Writer_Excel5
 - Bugfix:   (MB) Work item 8351 - Undefined method PHPExcel_Worksheet::setFreezePane() in ReferenceHelper.php on line 271
 - Bugfix:   (MB) Work item 8401 - Ampersands (&), left and right angles (<, >) in Rich-Text strings leads to corrupt output using PHPExcel_Writer_Excel2007
-- Bugfix:   (ET) Work item 8408 - Print header and footer not supporting UTF-8 in PHPExcel_Writer_Excel5
+- Bugfix:   (ET) Work item 8408 - Print header and footer not supporting gbk in PHPExcel_Writer_Excel5
 - Bugfix:   (ET) Work item 8463 - Vertical page breaks not working with PHPExcel_Writer_Excel5
 - Bugfix:   (ET) Work item 8476 - Missing support for accounting underline types in PHPExcel_Writer_Excel5
 - Bugfix:   (ET) Work item 8482 - Infinite loops when reading corrupt xls file using PHPExcel_Reader_Excel5
@@ -603,7 +603,7 @@ documentation for more information on entering dates into a cell.
 - Feature:  (MB, ET) Work item 7828 - Option for reading only specified interval of rows in a sheet
 - Bugfix:   (MBaker) Work item 7367 - PHPExcel_Calculation_Functions::DATETIMENOW() and PHPExcel_Calculation_Functions::DATENOW() to force UTC
 - Bugfix:   (MBaker) Work item 7395 - Modified PHPExcel_Shared_Date::FormattedPHPToExcel() and PHPExcel_Shared_Date::ExcelToPHP to force datatype for return values
-- Bugfix:   (ET) Work item 7450 - Excel5 reader not producing UTF-8 strings with BIFF5 files
+- Bugfix:   (ET) Work item 7450 - Excel5 reader not producing gbk strings with BIFF5 files
 - Bugfix:   (MB) Work item 7470 - Array constant in formula gives run-time notice with Excel2007 writer
 - Bugfix:   (MB) Work item 7494 - PHPExcel_Reader_Excel2007 setReadDataOnly(true) returns Rich-Text
 - Bugfix:   (ET) Work item 7496 - PHPExcel_Reader_Excel5 setReadDataOnly(true) returns Rich-Text
@@ -614,7 +614,7 @@ documentation for more information on entering dates into a cell.
 - Bugfix:   (ET) Work item 7531 - Text rotation and stacked text not working with PHPExcel_Writer_Excel5
 - Bugfix:   (MB) Work item 7536 - PHPExcel_Shared_Date::isDateTimeFormatCode erroneously says true
 - Bugfix:   (MB) Work item 7559 - Different images with same filename in separate directories become duplicates
-- Bugfix:   (ET) Work item 7568 - PHPExcel_Reader_Excel5 not returning sheet names as UTF-8 using for Excel 95 files
+- Bugfix:   (ET) Work item 7568 - PHPExcel_Reader_Excel5 not returning sheet names as gbk using for Excel 95 files
 - Bugfix:   (MB) Work item 7575 - setAutoSize(true) on empty column gives column width of 10 using PHPExcel_Writer_Excel2007
 - Bugfix:   (MB, ET) Work item 7573 - setAutoSize(true) on empty column gives column width of 255 using PHPExcel_Writer_Excel5
 - Bugfix:   (MB) Work item 7514 - Worksheet_Drawing bug
@@ -628,8 +628,8 @@ documentation for more information on entering dates into a cell.
 - Bugfix:   (ET) Work item 7621 - Incorrect cell protection values found when using Excel5 reader
 - Bugfix:   (ET) Work item 7623 - Default row height not working above highest row using PHPExcel_Writer_Excel5
 - Bugfix:   (ET) Work item 7637 - Default column width does not get applied when using PHPExcel_Writer_Excel5
-- Bugfix:   (ET) Work item 7642 - Broken support for UTF-8 string formula results in PHPExcel_Reader_Excel5
-- Bugfix:   (ET) Work item 7643 - UTF-8 sheet names not working with PHPExcel_Writer_Excel5
+- Bugfix:   (ET) Work item 7642 - Broken support for gbk string formula results in PHPExcel_Reader_Excel5
+- Bugfix:   (ET) Work item 7643 - gbk sheet names not working with PHPExcel_Writer_Excel5
 - Bugfix:   (MB) Work item 7631 - getCalculatedValue() with ISNONTEXT function causes script to stop
 - Bugfix:   (ET) Work item 7652 - Missing BIFF3 functions in PHPExcel_Writer_Excel5: USDOLLAR (YEN), FINDB, SEARCHB, REPLACEB, LEFTB, RIGHTB, MIDB, LENB, ASC, DBCS (JIS)
 - Bugfix:   (ET) Work item 7663 - Excel5 reader doesn't read numbers correctly in 64-bit systems
@@ -645,8 +645,8 @@ documentation for more information on entering dates into a cell.
 - Bugfix:   (ET) Work item 7727 - Direct entry of boolean or error type in cell not supported by PHPExcel_Writer_Excel5
 - Bugfix:   (MB) Work item 7714 - PHPExcel_Reader_Excel2007: Error reading cell with data type string, date number format, and numeric-like cell value
 - Bugfix:   (ET) Work item 7735 - Row and column outlines (group indent level) not showing after using PHPExcel_Writer_Excel5
-- Bugfix:   (ET) Work item 7737 - Missing UTF-8 support in number format codes for PHPExcel_Writer_Excel5
-- Bugfix:   (ET) Work item 7750 - Missing UTF-8 support with PHPExcel_Writer_Excel5 for explicit string in formula
+- Bugfix:   (ET) Work item 7737 - Missing gbk support in number format codes for PHPExcel_Writer_Excel5
+- Bugfix:   (ET) Work item 7750 - Missing gbk support with PHPExcel_Writer_Excel5 for explicit string in formula
 - Bugfix:   (MB) Work item 7726 - Problem with class constants in PHPExcel_Style_NumberFormat
 - Bugfix:   (ET) Work item 7758 - Sometimes errors with PHPExcel_Reader_Excel5 reading hyperlinks
 - Bugfix:   (ET) Work item 7759 - Hyperlink in cell always results in string data type when using PHPExcel_Writer_Excel5
@@ -713,7 +713,7 @@ documentation for more information on entering dates into a cell.
 - Bugfix:   (MB) Work item 6867 - Issues with drawings filenames
 - Bugfix:   (MB) Work item 7073 - fromArray() local variable isn't defined
 - Bugfix:   (MB) Work item 7276 - PHPExcel_Writer_Excel5->setTempDir() not passed to all classes involved in writing to a file
-- Bugfix:   (MB) Work item 7277 - Excel5 reader not handling UTF-8 properly
+- Bugfix:   (MB) Work item 7277 - Excel5 reader not handling gbk properly
 - Bugfix:   (MB) Work item 7327 - If you write a 0 value in cell, cell shows as empty
 - Bugfix:   (MB) Work item 7302 - Excel2007 writer: Row height ignored for empty rows
 - Bugfix:   (MB) Work item 7281 - Excel2007 (comments related error)

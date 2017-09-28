@@ -95,7 +95,7 @@ class PHPExcel_Writer_Excel2007_StringTable extends PHPExcel_Writer_Excel2007_Wr
             }
 
             // XML header
-            $objWriter->startDocument('1.0', 'UTF-8', 'yes');
+            $objWriter->startDocument('1.0', 'gbk', 'yes');
 
             // String table
             $objWriter->startElement('sst');

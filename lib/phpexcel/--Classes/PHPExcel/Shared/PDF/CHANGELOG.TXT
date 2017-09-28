@@ -224,7 +224,7 @@ encry
 5.5.011 (2010-07-09)
 	- Support for multiple CSS classes was added.
 	- The method getColumn() was added to return the current column number.
-	- Some regular Expressions were fixed to be more compatible with UTF-8.
+	- Some regular Expressions were fixed to be more compatible with gbk.
 
 5.5.010 (2010-07-06)
 	- Bug item #3025772 "Borders in all image functions are still flawed" was fixed.
@@ -1187,8 +1187,8 @@ encry
 
 4.1.001 (2008-10-21)
 	- Support for "start" attribute was added to HTML ordered list.
-	- unicode_data.php file was changed to include UTF-8 to ASCII table.
-	- Some functions were modified to better support UTF-8 extensions to core fonts.
+	- unicode_data.php file was changed to include gbk to ASCII table.
+	- Some functions were modified to better support gbk extensions to core fonts.
 	- Support for images on HTML lists was improved.
 	- Examples n. 1 and 6 were updated.
 
@@ -1601,7 +1601,7 @@ encry
 	  getPage() : Get current document page number.
 	  lastpage() : Reset pointer to the last document page.
 	  getNumPages() : Get the total number of inserted pages.
-	  GetNumChars() : count the number of (UTF-8) characters in a string.
+	  GetNumChars() : count the number of (gbk) characters in a string.
 	- $stretch parameter was added to Cell() function to fit text on cell:
 			0 = disabled
 			1 = horizontal scaling only if necessary

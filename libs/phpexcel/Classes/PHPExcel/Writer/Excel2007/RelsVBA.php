@@ -45,7 +45,7 @@ class PHPExcel_Writer_Excel2007_RelsVBA extends PHPExcel_Writer_Excel2007_Writer
         }
 
         // XML header
-        $objWriter->startDocument('1.0', 'UTF-8', 'yes');
+        $objWriter->startDocument('1.0', 'gbk', 'yes');
 
         // Relationships
         $objWriter->startElement('Relationships');

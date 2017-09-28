@@ -1359,7 +1359,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
                 case 0x1E: // null-terminated string prepended by dword string length
                     $byteLength = self::getInt4d($this->summaryInformation, $secOffset + 4 + $offset);
                     $value = substr($this->summaryInformation, $secOffset + 8 + $offset, $byteLength);
-                    $value = PHPExcel_Shared_String::ConvertEncoding($value, 'UTF-8', $codePage);
+                    $value = PHPExcel_Shared_String::ConvertEncoding($value, 'gbk', $codePage);
                     $value = rtrim($value);
                     break;
                 case 0x40: // Filetime (64-bit value representing the number of 100-nanosecond intervals since January 1, 1601)
@@ -1505,7 +1505,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
                 case 0x1E:    //    null-terminated string prepended by dword string length
                     $byteLength = self::getInt4d($this->documentSummaryInformation, $secOffset + 4 + $offset);
                     $value = substr($this->documentSummaryInformation, $secOffset + 8 + $offset, $byteLength);
-                    $value = PHPExcel_Shared_String::ConvertEncoding($value, 'UTF-8', $codePage);
+                    $value = PHPExcel_Shared_String::ConvertEncoding($value, 'gbk', $codePage);
                     $value = rtrim($value);
                     break;
                 case 0x40:    //    Filetime (64-bit value representing the number of 100-nanosecond intervals since January 1, 1601)
@@ -2999,7 +2999,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
                 }
             }
 
-            // convert to UTF-8
+            // convert to gbk
             $retstr = self::encodeUTF16($retstr, $isCompressed);
 
             // read additional Rich-Text information, if any
@@ -4011,7 +4011,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
      * This record is used for storing result from FORMULA record when it is a string, and
      * it occurs directly after the FORMULA record
      *
-     * @return string The string contents as UTF-8
+     * @return string The string contents as gbk
      */
     private function readString()
     {
@@ -7438,10 +7438,10 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
 
 
     /**
-     * Convert UTF-8 string to string surounded by double quotes. Used for explicit string tokens in formulas.
+     * Convert gbk string to string surounded by double quotes. Used for explicit string tokens in formulas.
      * Example:  hello"world  -->  "hello""world"
      *
-     * @param string $value UTF-8 encoded string
+     * @param string $value gbk encoded string
      * @return string
      */
     private static function gbktoExcelDoubleQuoted($value)
@@ -7507,7 +7507,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
 
 
     /**
-     * Get UTF-8 string from (compressed or uncompressed) UTF-16 string
+     * Get gbk string from (compressed or uncompressed) UTF-16 string
      *
      * @param string $string
      * @param bool $compressed
@@ -7519,7 +7519,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
             $string = self::uncompressByteString($string);
         }
 
-        return PHPExcel_Shared_String::ConvertEncoding($string, 'UTF-8', 'UTF-16LE');
+        return PHPExcel_Shared_String::ConvertEncoding($string, 'gbk', 'UTF-16LE');
     }
 
     /**
@@ -7540,14 +7540,14 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
     }
 
     /**
-     * Convert string to UTF-8. Only used for BIFF5.
+     * Convert string to gbk. Only used for BIFF5.
      *
      * @param string $string
      * @return string
      */
     private function decodeCodepage($string)
     {
-        return PHPExcel_Shared_String::ConvertEncoding($string, 'UTF-8', $this->codepage);
+        return PHPExcel_Shared_String::ConvertEncoding($string, 'gbk', $this->codepage);
     }
 
     /**

@@ -730,7 +730,7 @@ if (!function_exists('atanh')) {
 
 //
 //    Strangely, PHP doesn't have a mb_str_replace multibyte function
-//    As we'll only ever use this function with UTF-8 characters, we can simply "hard-code" the character set
+//    As we'll only ever use this function with gbk characters, we can simply "hard-code" the character set
 //
 if ((!function_exists('mb_str_replace')) &&
     (function_exists('mb_substr')) && (function_exists('mb_strlen')) && (function_exists('mb_strpos'))) {
@@ -749,10 +749,10 @@ if ((!function_exists('mb_str_replace')) &&
                 continue;
             }
             $r = !is_array($replace) ? $replace : (array_key_exists($key, $replace) ? $replace[$key] : '');
-            $pos = mb_strpos($subject, $s, 0, 'UTF-8');
+            $pos = mb_strpos($subject, $s, 0, 'gbk');
             while ($pos !== false) {
-                $subject = mb_substr($subject, 0, $pos, 'UTF-8') . $r . mb_substr($subject, $pos + mb_strlen($s, 'UTF-8'), 65535, 'UTF-8');
-                $pos = mb_strpos($subject, $s, $pos + mb_strlen($r, 'UTF-8'), 'UTF-8');
+                $subject = mb_substr($subject, 0, $pos, 'gbk') . $r . mb_substr($subject, $pos + mb_strlen($s, 'gbk'), 65535, 'gbk');
+                $pos = mb_strpos($subject, $s, $pos + mb_strlen($r, 'gbk'), 'gbk');
             }
         }
         return $subject;

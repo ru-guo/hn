@@ -48,7 +48,7 @@ class PHPExcel_Writer_OpenDocument_MetaInf extends PHPExcel_Writer_OpenDocument_
         }
 
         // XML header
-        $objWriter->startDocument('1.0', 'UTF-8');
+        $objWriter->startDocument('1.0', 'gbk');
 
         // Manifest
         $objWriter->startElement('manifest:manifest');

@@ -74,7 +74,7 @@ class PHPExcel_Calculation_TextData
         }
 
         if (function_exists('mb_convert_encoding')) {
-            return mb_convert_encoding('&#'.intval($character).';', 'UTF-8', 'HTML-ENTITIES');
+            return mb_convert_encoding('&#'.intval($character).';', 'gbk', 'HTML-ENTITIES');
         } else {
             return chr(intval($character));
         }
@@ -148,8 +148,8 @@ class PHPExcel_Calculation_TextData
 
         $character = $characters;
         if ((function_exists('mb_strlen')) && (function_exists('mb_substr'))) {
-            if (mb_strlen($characters, 'UTF-8') > 1) {
-                $character = mb_substr($characters, 0, 1, 'UTF-8');
+            if (mb_strlen($characters, 'gbk') > 1) {
+                $character = mb_substr($characters, 0, 1, 'gbk');
             }
             return self::unicodeToOrd($character);
         } else {
@@ -250,7 +250,7 @@ class PHPExcel_Calculation_TextData
                     return $offset;
                 }
                 if (function_exists('mb_strpos')) {
-                    $pos = mb_strpos($haystack, $needle, --$offset, 'UTF-8');
+                    $pos = mb_strpos($haystack, $needle, --$offset, 'gbk');
                 } else {
                     $pos = strpos($haystack, $needle, --$offset);
                 }
@@ -287,7 +287,7 @@ class PHPExcel_Calculation_TextData
                     return $offset;
                 }
                 if (function_exists('mb_stripos')) {
-                    $pos = mb_stripos($haystack, $needle, --$offset, 'UTF-8');
+                    $pos = mb_stripos($haystack, $needle, --$offset, 'gbk');
                 } else {
                     $pos = stripos($haystack, $needle, --$offset);
                 }
@@ -353,7 +353,7 @@ class PHPExcel_Calculation_TextData
         }
 
         if (function_exists('mb_substr')) {
-            return mb_substr($value, 0, $chars, 'UTF-8');
+            return mb_substr($value, 0, $chars, 'gbk');
         } else {
             return substr($value, 0, $chars);
         }
@@ -383,7 +383,7 @@ class PHPExcel_Calculation_TextData
         }
 
         if (function_exists('mb_substr')) {
-            return mb_substr($value, --$start, $chars, 'UTF-8');
+            return mb_substr($value, --$start, $chars, 'gbk');
         } else {
             return substr($value, --$start, $chars);
         }
@@ -411,7 +411,7 @@ class PHPExcel_Calculation_TextData
         }
 
         if ((function_exists('mb_substr')) && (function_exists('mb_strlen'))) {
-            return mb_substr($value, mb_strlen($value, 'UTF-8') - $chars, $chars, 'UTF-8');
+            return mb_substr($value, mb_strlen($value, 'gbk') - $chars, $chars, 'gbk');
         } else {
             return substr($value, strlen($value) - $chars);
         }
@@ -433,7 +433,7 @@ class PHPExcel_Calculation_TextData
         }
 
         if (function_exists('mb_strlen')) {
-            return mb_strlen($value, 'UTF-8');
+            return mb_strlen($value, 'gbk');
         } else {
             return strlen($value);
         }
@@ -549,7 +549,7 @@ class PHPExcel_Calculation_TextData
             $pos = -1;
             while ($instance > 0) {
                 if (function_exists('mb_strpos')) {
-                    $pos = mb_strpos($text, $fromText, $pos+1, 'UTF-8');
+                    $pos = mb_strpos($text, $fromText, $pos+1, 'gbk');
                 } else {
                     $pos = strpos($text, $fromText, $pos+1);
                 }
@@ -560,7 +560,7 @@ class PHPExcel_Calculation_TextData
             }
             if ($pos !== false) {
                 if (function_exists('mb_strlen')) {
-                    return self::REPLACE($text, ++$pos, mb_strlen($fromText, 'UTF-8'), $toText);
+                    return self::REPLACE($text, ++$pos, mb_strlen($fromText, 'gbk'), $toText);
                 } else {
                     return self::REPLACE($text, ++$pos, strlen($fromText), $toText);
                 }

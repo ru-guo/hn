@@ -60,7 +60,7 @@ class PHPExcel_Writer_OpenDocument_Content extends PHPExcel_Writer_OpenDocument_
         }
 
         // XML header
-        $objWriter->startDocument('1.0', 'UTF-8');
+        $objWriter->startDocument('1.0', 'gbk');
 
         // Content
         $objWriter->startElement('office:document-content');

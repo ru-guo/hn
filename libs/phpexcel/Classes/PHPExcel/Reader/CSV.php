@@ -42,7 +42,7 @@ class PHPExcel_Reader_CSV extends PHPExcel_Reader_Abstract implements PHPExcel_R
      * @access    private
      * @var    string
      */
-    private $inputEncoding = 'UTF-8';
+    private $inputEncoding = 'gbk';
 
     /**
      * Delimiter
@@ -107,7 +107,7 @@ class PHPExcel_Reader_CSV extends PHPExcel_Reader_Abstract implements PHPExcel_R
      *
      * @param string $pValue Input encoding
      */
-    public function setInputEncoding($pValue = 'UTF-8')
+    public function setInputEncoding($pValue = 'gbk')
     {
         $this->inputEncoding = $pValue;
         return $this;
@@ -132,7 +132,7 @@ class PHPExcel_Reader_CSV extends PHPExcel_Reader_Abstract implements PHPExcel_R
         rewind($this->fileHandle);
 
         switch ($this->inputEncoding) {
-            case 'UTF-8':
+            case 'gbk':
                 fgets($this->fileHandle, 4) == "\xEF\xBB\xBF" ?
                     fseek($this->fileHandle, 3) : fseek($this->fileHandle, 0);
                 break;
@@ -285,8 +285,8 @@ class PHPExcel_Reader_CSV extends PHPExcel_Reader_Abstract implements PHPExcel_R
                     $rowDatum = str_replace($escapeEnclosures, $this->enclosure, $rowDatum);
 
                     // Convert encoding if necessary
-                    if ($this->inputEncoding !== 'UTF-8') {
-                        $rowDatum = PHPExcel_Shared_String::ConvertEncoding($rowDatum, 'UTF-8', $this->inputEncoding);
+                    if ($this->inputEncoding !== 'gbk') {
+                        $rowDatum = PHPExcel_Shared_String::ConvertEncoding($rowDatum, 'gbk', $this->inputEncoding);
                     }
 
                     // Set cell value

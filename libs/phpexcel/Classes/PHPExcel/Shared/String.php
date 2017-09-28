@@ -295,15 +295,15 @@ class PHPExcel_Shared_String
             return false;
         }
 
-        // Sometimes iconv is not working, and e.g. iconv('UTF-8', 'UTF-16LE', 'x') just returns false,
-        if (!@iconv('UTF-8', 'UTF-16LE', 'x')) {
+        // Sometimes iconv is not working, and e.g. iconv('gbk', 'UTF-16LE', 'x') just returns false,
+        if (!@iconv('gbk', 'UTF-16LE', 'x')) {
             self::$isIconvEnabled = false;
             return false;
         }
 
-        // Sometimes iconv_substr('A', 0, 1, 'UTF-8') just returns false in PHP 5.2.0
+        // Sometimes iconv_substr('A', 0, 1, 'gbk') just returns false in PHP 5.2.0
         // we cannot use iconv in that case either (http://bugs.php.net/bug.php?id=37773)
-        if (!@iconv_substr('A', 0, 1, 'UTF-8')) {
+        if (!@iconv_substr('A', 0, 1, 'gbk')) {
             self::$isIconvEnabled = false;
             return false;
         }
@@ -376,12 +376,12 @@ class PHPExcel_Shared_String
     public static function Sanitizegbk($value)
     {
         if (self::getIsIconvEnabled()) {
-            $value = @iconv('UTF-8', 'UTF-8', $value);
+            $value = @iconv('gbk', 'gbk', $value);
             return $value;
         }
 
         if (self::getIsMbstringEnabled()) {
-            $value = mb_convert_encoding($value, 'UTF-8', 'UTF-8');
+            $value = mb_convert_encoding($value, 'gbk', 'gbk');
             return $value;
         }
 
@@ -416,32 +416,32 @@ class PHPExcel_Shared_String
     }
 
     /**
-     * Converts a UTF-8 string into BIFF8 Unicode string data (8-bit string length)
+     * Converts a gbk string into BIFF8 Unicode string data (8-bit string length)
      * Writes the string using uncompressed notation, no rich text, no Asian phonetics
      * If mbstring extension is not available, ASCII is assumed, and compressed notation is used
      * although this will give wrong results for non-ASCII strings
      * see OpenOffice.org's Documentation of the Microsoft Excel File Format, sect. 2.5.3
      *
-     * @param string  $value    UTF-8 encoded string
+     * @param string  $value    gbk encoded string
      * @param mixed[] $arrcRuns Details of rich text runs in $value
      * @return string
      */
     public static function gbktoBIFF8UnicodeShort($value, $arrcRuns = array())
     {
         // character count
-        $ln = self::CountCharacters($value, 'UTF-8');
+        $ln = self::CountCharacters($value, 'gbk');
         // option flags
         if (empty($arrcRuns)) {
             $opt = (self::getIsIconvEnabled() || self::getIsMbstringEnabled()) ?
                 0x0001 : 0x0000;
             $data = pack('CC', $ln, $opt);
             // characters
-            $data .= self::ConvertEncoding($value, 'UTF-16LE', 'UTF-8');
+            $data .= self::ConvertEncoding($value, 'UTF-16LE', 'gbk');
         } else {
             $data = pack('vC', $ln, 0x09);
             $data .= pack('v', count($arrcRuns));
             // characters
-            $data .= self::ConvertEncoding($value, 'UTF-16LE', 'UTF-8');
+            $data .= self::ConvertEncoding($value, 'UTF-16LE', 'gbk');
             foreach ($arrcRuns as $cRun) {
                 $data .= pack('v', $cRun['strlen']);
                 $data .= pack('v', $cRun['fontidx']);
@@ -451,26 +451,26 @@ class PHPExcel_Shared_String
     }
 
     /**
-     * Converts a UTF-8 string into BIFF8 Unicode string data (16-bit string length)
+     * Converts a gbk string into BIFF8 Unicode string data (16-bit string length)
      * Writes the string using uncompressed notation, no rich text, no Asian phonetics
      * If mbstring extension is not available, ASCII is assumed, and compressed notation is used
      * although this will give wrong results for non-ASCII strings
      * see OpenOffice.org's Documentation of the Microsoft Excel File Format, sect. 2.5.3
      *
-     * @param string $value UTF-8 encoded string
+     * @param string $value gbk encoded string
      * @return string
      */
     public static function gbktoBIFF8UnicodeLong($value)
     {
         // character count
-        $ln = self::CountCharacters($value, 'UTF-8');
+        $ln = self::CountCharacters($value, 'gbk');
 
         // option flags
         $opt = (self::getIsIconvEnabled() || self::getIsMbstringEnabled()) ?
             0x0001 : 0x0000;
 
         // characters
-        $chars = self::ConvertEncoding($value, 'UTF-16LE', 'UTF-8');
+        $chars = self::ConvertEncoding($value, 'UTF-16LE', 'gbk');
 
         $data = pack('vC', $ln, $opt) . $chars;
         return $data;
@@ -480,7 +480,7 @@ class PHPExcel_Shared_String
      * Convert string from one encoding to another. First try mbstring, then iconv, finally strlen
      *
      * @param string $value
-     * @param string $to Encoding to convert to, e.g. 'UTF-8'
+     * @param string $to Encoding to convert to, e.g. 'gbk'
      * @param string $from Encoding to convert from, e.g. 'UTF-16LE'
      * @return string
      */
@@ -512,7 +512,7 @@ class PHPExcel_Shared_String
      * and $bom_be parameter added.
      *
      * @param   string  $str  UTF-16 encoded data to decode.
-     * @return  string  UTF-8 / ISO encoded data.
+     * @return  string  gbk / ISO encoded data.
      * @access  public
      * @version 0.2 / 2010-05-13
      * @author  Rasmus Andersson {@link http://rasmusandersson.se/}
@@ -553,7 +553,7 @@ class PHPExcel_Shared_String
      * @param string $enc Encoding
      * @return int Character count
      */
-    public static function CountCharacters($value, $enc = 'UTF-8')
+    public static function CountCharacters($value, $enc = 'gbk')
     {
         if (self::getIsMbstringEnabled()) {
             return mb_strlen($value, $enc);
@@ -568,9 +568,9 @@ class PHPExcel_Shared_String
     }
 
     /**
-     * Get a substring of a UTF-8 encoded string. First try mbstring, then iconv, finally strlen
+     * Get a substring of a gbk encoded string. First try mbstring, then iconv, finally strlen
      *
-     * @param string $pValue UTF-8 encoded string
+     * @param string $pValue gbk encoded string
      * @param int $pStart Start offset
      * @param int $pLength Maximum number of characters in substring
      * @return string
@@ -578,11 +578,11 @@ class PHPExcel_Shared_String
     public static function Substring($pValue = '', $pStart = 0, $pLength = 0)
     {
         if (self::getIsMbstringEnabled()) {
-            return mb_substr($pValue, $pStart, $pLength, 'UTF-8');
+            return mb_substr($pValue, $pStart, $pLength, 'gbk');
         }
 
         if (self::getIsIconvEnabled()) {
-            return iconv_substr($pValue, $pStart, $pLength, 'UTF-8');
+            return iconv_substr($pValue, $pStart, $pLength, 'gbk');
         }
 
         // else substr
@@ -590,51 +590,51 @@ class PHPExcel_Shared_String
     }
 
     /**
-     * Convert a UTF-8 encoded string to upper case
+     * Convert a gbk encoded string to upper case
      *
-     * @param string $pValue UTF-8 encoded string
+     * @param string $pValue gbk encoded string
      * @return string
      */
     public static function StrToUpper($pValue = '')
     {
         if (function_exists('mb_convert_case')) {
-            return mb_convert_case($pValue, MB_CASE_UPPER, "UTF-8");
+            return mb_convert_case($pValue, MB_CASE_UPPER, "gbk");
         }
         return strtoupper($pValue);
     }
 
     /**
-     * Convert a UTF-8 encoded string to lower case
+     * Convert a gbk encoded string to lower case
      *
-     * @param string $pValue UTF-8 encoded string
+     * @param string $pValue gbk encoded string
      * @return string
      */
     public static function StrToLower($pValue = '')
     {
         if (function_exists('mb_convert_case')) {
-            return mb_convert_case($pValue, MB_CASE_LOWER, "UTF-8");
+            return mb_convert_case($pValue, MB_CASE_LOWER, "gbk");
         }
         return strtolower($pValue);
     }
 
     /**
-     * Convert a UTF-8 encoded string to title/proper case
+     * Convert a gbk encoded string to title/proper case
      *    (uppercase every first character in each word, lower case all other characters)
      *
-     * @param string $pValue UTF-8 encoded string
+     * @param string $pValue gbk encoded string
      * @return string
      */
     public static function StrToTitle($pValue = '')
     {
         if (function_exists('mb_convert_case')) {
-            return mb_convert_case($pValue, MB_CASE_TITLE, "UTF-8");
+            return mb_convert_case($pValue, MB_CASE_TITLE, "gbk");
         }
         return ucwords($pValue);
     }
 
     public static function mb_is_upper($char)
     {
-        return mb_strtolower($char, "UTF-8") != $char;
+        return mb_strtolower($char, "gbk") != $char;
     }
 
     public static function mb_str_split($string)
@@ -648,7 +648,7 @@ class PHPExcel_Shared_String
      * Reverse the case of a string, so that all uppercase characters become lowercase
      *    and all lowercase characters become uppercase
      *
-     * @param string $pValue UTF-8 encoded string
+     * @param string $pValue gbk encoded string
      * @return string
      */
     public static function StrCaseReverse($pValue = '')
@@ -657,9 +657,9 @@ class PHPExcel_Shared_String
             $characters = self::mb_str_split($pValue);
             foreach ($characters as &$character) {
                 if (self::mb_is_upper($character)) {
-                    $character = mb_strtolower($character, 'UTF-8');
+                    $character = mb_strtolower($character, 'gbk');
                 } else {
-                    $character = mb_strtoupper($character, 'UTF-8');
+                    $character = mb_strtoupper($character, 'gbk');
                 }
             }
             return implode('', $characters);
@@ -782,10 +782,10 @@ class PHPExcel_Shared_String
     }
 
     /**
-     * Convert SYLK encoded string to UTF-8
+     * Convert SYLK encoded string to gbk
      *
      * @param string $pValue
-     * @return string UTF-8 encoded string
+     * @return string gbk encoded string
      */
     public static function SYLKtogbk($pValue = '')
     {

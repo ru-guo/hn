@@ -789,7 +789,7 @@ class PHPExcel_Writer_Excel5_Workbook extends PHPExcel_Writer_Excel5_BIFFwriter
     /**
      * Write a DEFINEDNAME record for BIFF8 using explicit binary formula data
      *
-     * @param    string        $name            The name in UTF-8
+     * @param    string        $name            The name in gbk
      * @param    string        $formulaData    The binary formula data
      * @param    string        $sheetIndex        1-based sheet index the defined name applies to. 0 = global
      * @param    boolean        $isBuiltIn        Built-in name?

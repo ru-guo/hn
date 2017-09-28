@@ -401,7 +401,7 @@ class PHPExcel_Writer_Excel5_Worksheet extends PHPExcel_Writer_Excel5_BIFFwriter
             if ($cVal instanceof PHPExcel_RichText) {
                 // $this->writeString($row, $column, $cVal->getPlainText(), $xfIndex);
                 $arrcRun = array();
-                $str_len = PHPExcel_Shared_String::CountCharacters($cVal->getPlainText(), 'UTF-8');
+                $str_len = PHPExcel_Shared_String::CountCharacters($cVal->getPlainText(), 'gbk');
                 $str_pos = 0;
                 $elements = $cVal->getRichTextElements();
                 foreach ($elements as $element) {
@@ -413,7 +413,7 @@ class PHPExcel_Writer_Excel5_Worksheet extends PHPExcel_Writer_Excel5_BIFFwriter
                     }
                     $arrcRun[] = array('strlen' => $str_pos, 'fontidx' => $str_fontidx);
                     // Position FROM
-                    $str_pos += PHPExcel_Shared_String::CountCharacters($element->getText(), 'UTF-8');
+                    $str_pos += PHPExcel_Shared_String::CountCharacters($element->getText(), 'gbk');
                 }
                 $this->writeRichTextString($row, $column, $cVal->getPlainText(), $xfIndex, $arrcRun);
             } else {
@@ -1061,7 +1061,7 @@ class PHPExcel_Writer_Excel5_Worksheet extends PHPExcel_Writer_Excel5_BIFFwriter
         $url_len = PHPExcel_Shared_String::CountCharacters($url);
         $url_len = pack('V', $url_len);
 
-        $url = PHPExcel_Shared_String::ConvertEncoding($url, 'UTF-16LE', 'UTF-8');
+        $url = PHPExcel_Shared_String::ConvertEncoding($url, 'UTF-16LE', 'gbk');
 
         // Calculate the data length
         $length      = 0x24 + strlen($url);

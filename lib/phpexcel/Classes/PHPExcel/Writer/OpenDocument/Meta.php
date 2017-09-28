@@ -48,7 +48,7 @@ class PHPExcel_Writer_OpenDocument_Meta extends PHPExcel_Writer_OpenDocument_Wri
         }
 
         // XML header
-        $objWriter->startDocument('1.0', 'UTF-8');
+        $objWriter->startDocument('1.0', 'gbk');
 
         // Meta
         $objWriter->startElement('office:document-meta');
