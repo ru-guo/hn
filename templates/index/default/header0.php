@@ -4,7 +4,7 @@
 <head>
 <meta name="author" content="中易广告联盟系统 | www.zyiis.com" />
 <meta name="Copyright" content="Copyright (c) 2011 zyiis.com" />
-<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
 <link href="/templates/<?php echo Z_TPL?>/style.css" type=text/css rel=stylesheet>
 <script src="/javascript/function.js" type="text/javascript"></script>
 

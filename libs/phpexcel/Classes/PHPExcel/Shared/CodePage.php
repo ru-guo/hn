@@ -79,7 +79,7 @@ class PHPExcel_Shared_CodePage
             case 932:
                 return 'CP932';    //    ANSI Japanese Shift-JIS
             case 936:
-                return 'CP936';    //    ANSI Chinese Simplified GBK
+                return 'CP936';    //    ANSI Chinese Simplified gbk
             case 949:
                 return 'CP949';    //    ANSI Korean (Wansung)
             case 950:

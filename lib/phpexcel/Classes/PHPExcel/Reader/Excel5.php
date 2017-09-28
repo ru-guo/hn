@@ -5628,7 +5628,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
                 // offset: 1; size: var; Unicode string, 8-bit string length
                 $string = self::readUnicodeStringShort(substr($formulaData, 1));
                 $size = 1 + $string['size'];
-                $data = self::UTF8toExcelDoubleQuoted($string['value']);
+                $data = self::gbktoExcelDoubleQuoted($string['value']);
                 break;
             case 0x19:    //    Special attribute
                 // offset: 1; size: 1; attribute type flags:
@@ -7444,7 +7444,7 @@ class PHPExcel_Reader_Excel5 extends PHPExcel_Reader_Abstract implements PHPExce
      * @param string $value UTF-8 encoded string
      * @return string
      */
-    private static function UTF8toExcelDoubleQuoted($value)
+    private static function gbktoExcelDoubleQuoted($value)
     {
         return '"' . str_replace('"', '""', $value) . '"';
     }

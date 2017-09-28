@@ -47,7 +47,7 @@ class PHPExcel_Cell_AdvancedValueBinder extends PHPExcel_Cell_DefaultValueBinder
     {
         // sanitize UTF-8 strings
         if (is_string($value)) {
-            $value = PHPExcel_Shared_String::SanitizeUTF8($value);
+            $value = PHPExcel_Shared_String::Sanitizegbk($value);
         }
 
         // Find out data type
@@ -172,7 +172,7 @@ class PHPExcel_Cell_AdvancedValueBinder extends PHPExcel_Cell_DefaultValueBinder
 
             // Check for newline character "\n"
             if (strpos($value, "\n") !== false) {
-                $value = PHPExcel_Shared_String::SanitizeUTF8($value);
+                $value = PHPExcel_Shared_String::Sanitizegbk($value);
                 $cell->setValueExplicit($value, PHPExcel_Cell_DataType::TYPE_STRING);
                 // Set style
                 $cell->getWorksheet()->getStyle($cell->getCoordinate())

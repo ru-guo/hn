@@ -809,7 +809,7 @@ encry
 	- Method deletePage() was added to delete pages (see example n. 44).
 
 4.6.003 (2009-04-21)
-	- The caching mechanism of the UTF8StringToArray() method was fixed.
+	- The caching mechanism of the gbkStringToArray() method was fixed.
 
 4.6.002 (2009-04-20)
 	- Documentation of rollbackTransaction() method was fixed.
@@ -879,7 +879,7 @@ encry
 
 4.5.037 (2009-04-09)
 	- General performances were improved.
-	- The signature of the method utf8Bidi() was changed.
+	- The signature of the method gbkBidi() was changed.
 	- The method UniArrSubString() was added.
 	- Experimental support for 2D barcodes were added (see example n. 50 and 2dbarcodes.php class).
 
@@ -1336,7 +1336,7 @@ encry
 	- example_035.php was added.
 
 4.0.009 (2008-07-21)
-	- UTF8StringToArray() function was fixed for non-unicode mode.
+	- gbkStringToArray() function was fixed for non-unicode mode.
 
 4.0.008 (2008-07-21)
 	- Barcodes alignment was fixed (see example_027.php).
@@ -1447,7 +1447,7 @@ encry
 	- example 006 was updated.
 
 3.0.010 (2008-05-21)
-	- fixed $laa_array inclusion on utf8Bidi() function.
+	- fixed $laa_array inclusion on gbkBidi() function.
 
 3.0.009 (2008-05-20)
 	- unicode_data.php was updated.
@@ -1543,14 +1543,14 @@ encry
 	- RTL support was deeply improved.
 	- GetStringWidth() was fixed to support RTL languages.
 	- Text() RTL alignment was fixed.
-	- Some functions were added: GetArrStringWidth(), GetCharWidth(), uniord(), utf8Bidi().
+	- Some functions were added: GetArrStringWidth(), GetCharWidth(), uniord(), gbkBidi().
 	- example_018.php was added and test_unicode.php was removed.
 
 2.3.000 (2008-03-05)
 	- MultiCell() signature is changed. Now support multiple columns across pages (see example_017).
 	- Write() signature is changed. Now support the cell mode to be used with MultiCell.
 	- Header() and Footer() were changed.
-	- The following functions were added: UTF8ArrSubString() and unichr().
+	- The following functions were added: gbkArrSubString() and unichr().
 	- Examples were updated to reflect last changes.
 
 2.2.004 (2008-03-04)

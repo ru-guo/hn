@@ -29,7 +29,7 @@ include TPL_DIR . "/headerxin1.php";?>
         </li>
 		<!---验证码--->
               <li style="position:relative;">
-          <label><em class="red">*</em> 验证码：</label>
+        <label><em class="red">*</em> 验证码：</label>
           <input type="text" class="input_text" name="checkcode" id="img_code" placeholder="请输入验证码" maxlength="4">
           <img src="http://<?php echo $GLOBALS['C_ZYIIS']['authorized_url']?>/index.php?action=imgcode"  alt= "看不清?请点击刷新验证码" align="absmiddle" id="varImg"  style= "cursor:pointer;"  onclick="refurbish();"/>
           <div class="tip" id="img_code_tip" >验证码不正确</div>
@@ -76,7 +76,7 @@ include TPL_DIR . "/headerxin1.php";?>
 	 $("#txt_password_tip").hide();	
 	 var img_code = $.trim($("#img_code").val());
      if (img_code == "") {
-        $("#img_code_tip").html('验证码不能为空').show();	
+        $("#img_code_tip").html('验证码不能为空').show();
         return false;
      }
 	 $("#img_code_tip").hide();	

@@ -151,7 +151,7 @@ class PHPExcel_Reader_SYLK extends PHPExcel_Reader_Abstract implements PHPExcel_
             $columnIndex = 0;
 
             // convert SYLK encoded $rowData to UTF-8
-            $rowData = PHPExcel_Shared_String::SYLKtoUTF8($rowData);
+            $rowData = PHPExcel_Shared_String::SYLKtogbk($rowData);
 
             // explode each row at semicolons while taking into account that literal semicolon (;)
             // is escaped like this (;;)
@@ -238,7 +238,7 @@ class PHPExcel_Reader_SYLK extends PHPExcel_Reader_Abstract implements PHPExcel_
         // loop through one row (line) at a time in the file
         while (($rowData = fgets($fileHandle)) !== false) {
             // convert SYLK encoded $rowData to UTF-8
-            $rowData = PHPExcel_Shared_String::SYLKtoUTF8($rowData);
+            $rowData = PHPExcel_Shared_String::SYLKtogbk($rowData);
 
             // explode each row at semicolons while taking into account that literal semicolon (;)
             // is escaped like this (;;)

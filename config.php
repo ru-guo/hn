@@ -31,7 +31,7 @@ $GLOBALS['C_MYSQL'] = array(
 	'dbport' => '3306',		//连接端口
 	'dbuser' => 'root',		//数据库用户名
 	'dbpsw' => 'root',		//数据库密码
-	'dbname' => 'zygg',		//数据库表名
+	'dbname' => 'zygg1',		//数据库表名
 	'charset' => 'gbk',		//连接字符集
 	'sqlmode' => '1'		//MYSQL sql-mode开关 0=关闭 1=开启 
 );

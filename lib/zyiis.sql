@@ -5,7 +5,7 @@ CREATE TABLE `zyads_acls` (
   `data` mediumtext NOT NULL,
   `comparison` varchar(10) NOT NULL,
   KEY `planid` (`planid`)
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
 DROP TABLE IF EXISTS `zyads_admin`;
@@ -23,7 +23,7 @@ CREATE TABLE `zyads_admin` (
   `addtime` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `username` (`username`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 
 
@@ -38,7 +38,7 @@ CREATE TABLE `zyads_adminlog` (
   `day` date NOT NULL,
   `addtime` datetime NOT NULL,
   PRIMARY KEY (`logid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 
 
@@ -73,7 +73,7 @@ CREATE TABLE `zyads_ads` (
   KEY `width` (`width`),
   KEY `height` (`height`),
   KEY `adstypeid` (`adstypeid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 
 
@@ -97,7 +97,7 @@ CREATE TABLE `zyads_adsip1` (
   KEY `adstypeid` (`adstypeid`),
   KEY `planid` (`planid`),
   KEY `siteid` (`siteid`)
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
 
@@ -123,7 +123,7 @@ CREATE TABLE `zyads_adsipinfo1` (
   `g` mediumint(9) unsigned NOT NULL DEFAULT '0',
   `t` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`ipinfoid`)
-) ENGINE=MyISAM DEFAULT CHARSET=gbk AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 
 
@@ -133,7 +133,7 @@ CREATE TABLE `zyads_adsipreferer0` (
   `refererid` int(10) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`refererid`),
   KEY `referer` (`referer`(500))
-) ENGINE=MyISAM DEFAULT CHARSET=gbk AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 
 
@@ -143,7 +143,7 @@ CREATE TABLE `zyads_adsipsiteurl0` (
   `siteurlid` int(10) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`siteurlid`),
   KEY `siteurl` (`siteurl`(500))
-) ENGINE=MyISAM DEFAULT CHARSET=gbk AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 
 
@@ -153,7 +153,7 @@ CREATE TABLE `zyads_adsipuseragent0` (
   `useragentid` int(10) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`useragentid`),
   KEY `useragent` (`useragent`(500))
-) ENGINE=MyISAM DEFAULT CHARSET=gbk AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 
 
@@ -171,7 +171,7 @@ CREATE TABLE `zyads_adstype` (
   `status` tinyint(1) NOT NULL DEFAULT '1',
   `addtime` datetime NOT NULL,
   PRIMARY KEY (`adstypeid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=100 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=100 ;
 
 
 
@@ -218,7 +218,7 @@ CREATE TABLE `zyads_audit` (
   KEY `uid` (`uid`),
   KEY `status` (`status`),
   KEY `siteid` (`siteid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
  
 DROP TABLE IF EXISTS `zyads_cache`;
@@ -226,7 +226,7 @@ CREATE TABLE `zyads_cache` (
   `cacheid` varchar(255) CHARACTER SET latin1 NOT NULL,
   `content` blob NOT NULL,
   PRIMARY KEY (`cacheid`)
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
  
 
@@ -235,14 +235,14 @@ CREATE TABLE `zyads_cluster` (
   `uid` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
   `clusterid` tinyint(3) NOT NULL,
   PRIMARY KEY (`uid`)
-) ENGINE=MyISAM DEFAULT CHARSET=gbk AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
  
 
 DROP TABLE IF EXISTS `zyads_day`;
 CREATE TABLE `zyads_day` (
   `day` date NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
  
 
@@ -261,7 +261,7 @@ CREATE TABLE `zyads_exchange` (
   `deliverytime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `status` tinyint(1) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
  
  
@@ -276,7 +276,7 @@ CREATE TABLE `zyads_help` (
   `time` datetime NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=18 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
 
 --
 -- 转存表中的数据 `zyads_help`
@@ -331,7 +331,7 @@ CREATE TABLE `zyads_hour` (
   `hour23` mediumint(9) unsigned NOT NULL,
   KEY `day` (`day`,`plantype`),
   KEY `uid` (`uid`)
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
  
 
 DROP TABLE IF EXISTS `zyads_import`;
@@ -354,7 +354,7 @@ CREATE TABLE `zyads_import` (
   `addtime` datetime NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`importid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
  
 
@@ -362,10 +362,10 @@ DROP TABLE IF EXISTS `zyads_integral`;
 CREATE TABLE `zyads_integral` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `type` tinyint(1) unsigned NOT NULL,
-  `name` varchar(255) CHARACTER SET gbk NOT NULL,
-  `info` text CHARACTER SET gbk,
+  `name` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `info` text CHARACTER SET utf8,
   `integral` int(11) unsigned NOT NULL,
-  `imageurl` varchar(255) CHARACTER SET gbk NOT NULL,
+  `imageurl` varchar(255) CHARACTER SET utf8 NOT NULL,
   `num` int(8) unsigned NOT NULL DEFAULT '0',
   `top` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `status` tinyint(1) unsigned NOT NULL DEFAULT '1',
@@ -394,7 +394,7 @@ CREATE TABLE `zyads_loginlog` (
   `loginip` char(15) NOT NULL,
   `logintime` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 
 DROP TABLE IF EXISTS `zyads_message`;
@@ -414,7 +414,7 @@ CREATE TABLE `zyads_message` (
   KEY `isadmin` (`isadmin`),
   KEY `senduser` (`senduser`),
   KEY `touser` (`touser`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
  
 DROP TABLE IF EXISTS `zyads_news`;
@@ -427,7 +427,7 @@ CREATE TABLE `zyads_news` (
   `color` char(7) DEFAULT NULL,
   `is_view` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
  
 
@@ -458,7 +458,7 @@ CREATE TABLE `zyads_onlinepay` (
   PRIMARY KEY (`onlineid`),
   KEY `orderid` (`orderid`),
   KEY `addtime` (`addtime`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
  
 DROP TABLE IF EXISTS `zyads_orders`;
@@ -482,7 +482,7 @@ CREATE TABLE `zyads_orders` (
   `addtime` datetime DEFAULT '0000-00-00 00:00:00',
   `confirmtime` date DEFAULT '0000-00-00',
   PRIMARY KEY (`orderid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
  
 
@@ -506,7 +506,7 @@ CREATE TABLE `zyads_paylog` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique` (`uid`,`addtime`,`clearingtype`),
   KEY `addtime` (`addtime`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
  
 DROP TABLE IF EXISTS `zyads_plan`;
@@ -549,7 +549,7 @@ CREATE TABLE `zyads_plan` (
   KEY `plantype` (`plantype`),
   KEY `uid` (`uid`),
   KEY `status` (`status`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=11 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
  
 
@@ -571,7 +571,7 @@ CREATE TABLE `zyads_planstats` (
   `day` date NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique` (`day`,`planid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
  
 DROP TABLE IF EXISTS `zyads_province`;
@@ -615,15 +615,15 @@ CREATE TABLE `zyads_province` (
   `province33` mediumint(9) unsigned NOT NULL,
   `province34` mediumint(9) unsigned NOT NULL,
   `province35` mediumint(9) unsigned NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
  
 DROP TABLE IF EXISTS `zyads_sessions`;
 CREATE TABLE `zyads_sessions` (
-  `session_id` char(32) CHARACTER SET gbk COLLATE gbk_bin NOT NULL,
+  `session_id` char(32) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `session_expires` int(10) unsigned NOT NULL DEFAULT '0',
   `session_data` text,
   PRIMARY KEY (`session_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
  
 DROP TABLE IF EXISTS `zyads_settings`;
@@ -631,7 +631,7 @@ CREATE TABLE `zyads_settings` (
   `title` varchar(50) NOT NULL,
   `value` varchar(500) NOT NULL,
   PRIMARY KEY (`title`)
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
  
 INSERT INTO `zyads_settings` (`title`, `value`) VALUES
 ('mail_send', '2'),
@@ -763,7 +763,7 @@ CREATE TABLE `zyads_site` (
   `addtime` datetime NOT NULL,
   PRIMARY KEY (`siteid`),
   KEY `uid` (`uid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
  
 
@@ -774,7 +774,7 @@ CREATE TABLE `zyads_sitetype` (
   `sitename` char(100) NOT NULL,
   PRIMARY KEY (`sid`),
   KEY `sitename` (`sitename`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=135 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=135 ;
 
  
 
@@ -835,7 +835,7 @@ CREATE TABLE `zyads_specs` (
   `sort` int(5) NOT NULL DEFAULT '0',
   `type` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=49 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=49 ;
 
  
 
@@ -886,7 +886,7 @@ CREATE TABLE `zyads_stats` (
   KEY `day` (`day`),
   KEY `planid` (`planid`),
   KEY `uid` (`uid`)
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
  
 
@@ -900,7 +900,7 @@ CREATE TABLE `zyads_tempcip` (
   `type` tinyint(4) NOT NULL DEFAULT '0',
   KEY `ip` (`ip`),
   KEY `planid` (`planid`)
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
  
 
@@ -917,7 +917,7 @@ CREATE TABLE `zyads_tempip` (
   `minute` int(11) NOT NULL DEFAULT '0',
   KEY `ip` (`ip`),
   KEY `planid` (`planid`)
-) ENGINE=MyISAM DEFAULT CHARSET=gbk;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
  
 
@@ -933,7 +933,7 @@ CREATE TABLE `zyads_upadslog` (
   `addtime` datetime NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`uplogid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
  
 
@@ -993,7 +993,7 @@ CREATE TABLE `zyads_users` (
   KEY `weekmoney` (`weekmoney`),
   KEY `monthmoney` (`monthmoney`),
   KEY `serviceid` (`serviceid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=1000 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1000 ;
 
  
 
@@ -1020,6 +1020,6 @@ CREATE TABLE `zyads_zone` (
   PRIMARY KEY (`zoneid`),
   KEY `uid` (`uid`),
   KEY `siteid` (`siteid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=gbk AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
  

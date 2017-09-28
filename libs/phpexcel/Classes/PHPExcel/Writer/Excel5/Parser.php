@@ -593,7 +593,7 @@ class PHPExcel_Writer_Excel5_Parser
             throw new PHPExcel_Writer_Exception("String is too long");
         }
 
-        return pack('C', $this->ptg['ptgStr']) . PHPExcel_Shared_String::UTF8toBIFF8UnicodeShort($string);
+        return pack('C', $this->ptg['ptgStr']) . PHPExcel_Shared_String::gbktoBIFF8UnicodeShort($string);
     }
 
     /**

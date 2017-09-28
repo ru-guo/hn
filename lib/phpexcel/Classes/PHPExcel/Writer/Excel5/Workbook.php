@@ -478,7 +478,7 @@ class PHPExcel_Writer_Excel5_Workbook extends PHPExcel_Writer_Excel5_BIFFwriter
         // add size of Workbook globals part 2, the length of the SHEET records
         $total_worksheets = count($this->phpExcel->getAllSheets());
         foreach ($this->phpExcel->getWorksheetIterator() as $sheet) {
-            $offset += $boundsheet_length + strlen(PHPExcel_Shared_String::UTF8toBIFF8UnicodeShort($sheet->getTitle()));
+            $offset += $boundsheet_length + strlen(PHPExcel_Shared_String::gbktoBIFF8UnicodeShort($sheet->getTitle()));
         }
 
         // add the sizes of each of the Sheet substreams, respectively
@@ -806,7 +806,7 @@ class PHPExcel_Writer_Excel5_Workbook extends PHPExcel_Writer_Excel5_BIFFwriter
         $nlen = PHPExcel_Shared_String::CountCharacters($name);
 
         // name with stripped length field
-        $name = substr(PHPExcel_Shared_String::UTF8toBIFF8UnicodeLong($name), 2);
+        $name = substr(PHPExcel_Shared_String::gbktoBIFF8UnicodeLong($name), 2);
 
         // size of the formula (in bytes)
         $sz = strlen($formulaData);
@@ -937,7 +937,7 @@ class PHPExcel_Writer_Excel5_Workbook extends PHPExcel_Writer_Excel5_BIFFwriter
         $grbit = 0x0000;                    // Visibility and sheet type
 
         $data = pack("VCC", $offset, $ss, $st);
-        $data .= PHPExcel_Shared_String::UTF8toBIFF8UnicodeShort($sheetname);
+        $data .= PHPExcel_Shared_String::gbktoBIFF8UnicodeShort($sheetname);
 
         $length = strlen($data);
         $header = pack("vv", $record, $length);
@@ -1004,7 +1004,7 @@ class PHPExcel_Writer_Excel5_Workbook extends PHPExcel_Writer_Excel5_BIFFwriter
     {
         $record = 0x041E;    // Record identifier
 
-        $numberFormatString = PHPExcel_Shared_String::UTF8toBIFF8UnicodeLong($format);
+        $numberFormatString = PHPExcel_Shared_String::gbktoBIFF8UnicodeLong($format);
         $length = 2 + strlen($numberFormatString);    // Number of bytes to follow
 
 

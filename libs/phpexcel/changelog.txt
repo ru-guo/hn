@@ -867,7 +867,7 @@ documentation for more information on entering dates into a cell.
 - Feature:  (MB) Work item 4433 - Comment functionality
 - Bugfix:   (MB) Work item 4124 - Undefined variable in PHPExcel_Writer_Serialized
 - Bugfix:   (MB) Work item 4125 - Notice: Object of class PHPExcel_RichText could not be converted to int
-- Bugfix:   (MB) Work item 4126 - Excel5Writer: utf8 string not converted to utf16
+- Bugfix:   (MB) Work item 4126 - Excel5Writer: gbk string not converted to utf16
 - Bugfix:   (MB) Work item 4180 - PHPExcel_RichText and autosize
 - Bugfix:   (MB) Work item 4574 - Excel5Writer produces broken xls files after change mentioned in work item 4126
 - Bugfix:   (MB) Work item 4797 - Small bug in PHPExcel_Reader_Excel2007 function _readStyle

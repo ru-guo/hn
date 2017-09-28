@@ -660,7 +660,7 @@ class PHPExcel_Writer_Excel5_Worksheet extends PHPExcel_Writer_Excel5_BIFFwriter
     {
         $record    = 0x00FD;                   // Record identifier
         $length    = 0x000A;                   // Bytes to follow
-        $str = PHPExcel_Shared_String::UTF8toBIFF8UnicodeShort($str, $arrcRun);
+        $str = PHPExcel_Shared_String::gbktoBIFF8UnicodeShort($str, $arrcRun);
 
         /* check if string is already present */
         if (!isset($this->stringTable[$str])) {
@@ -729,7 +729,7 @@ class PHPExcel_Writer_Excel5_Worksheet extends PHPExcel_Writer_Excel5_BIFFwriter
         $record    = 0x00FD;                   // Record identifier
         $length    = 0x000A;                   // Bytes to follow
 
-        $str = PHPExcel_Shared_String::UTF8toBIFF8UnicodeLong($str);
+        $str = PHPExcel_Shared_String::gbktoBIFF8UnicodeLong($str);
 
         /* check if string is already present */
         if (!isset($this->stringTable[$str])) {
@@ -920,7 +920,7 @@ class PHPExcel_Writer_Excel5_Worksheet extends PHPExcel_Writer_Excel5_BIFFwriter
     private function writeStringRecord($stringValue)
     {
         $record = 0x0207;     // Record identifier
-        $data = PHPExcel_Shared_String::UTF8toBIFF8UnicodeLong($stringValue);
+        $data = PHPExcel_Shared_String::gbktoBIFF8UnicodeLong($stringValue);
 
         $length = strlen($data);
         $header = pack('vv', $record, $length);
@@ -1621,7 +1621,7 @@ class PHPExcel_Writer_Excel5_Worksheet extends PHPExcel_Writer_Excel5_BIFFwriter
                 hexdec($password)
             );
 
-            $recordData .= PHPExcel_Shared_String::UTF8toBIFF8UnicodeLong('p' . md5($recordData));
+            $recordData .= PHPExcel_Shared_String::gbktoBIFF8UnicodeLong('p' . md5($recordData));
 
             $length = strlen($recordData);
 
@@ -1844,7 +1844,7 @@ class PHPExcel_Writer_Excel5_Worksheet extends PHPExcel_Writer_Excel5_BIFFwriter
         }
         */
 
-        $recordData = PHPExcel_Shared_String::UTF8toBIFF8UnicodeLong($this->phpSheet->getHeaderFooter()->getOddHeader());
+        $recordData = PHPExcel_Shared_String::gbktoBIFF8UnicodeLong($this->phpSheet->getHeaderFooter()->getOddHeader());
         $length = strlen($recordData);
 
         $header   = pack("vv", $record, $length);
@@ -1868,7 +1868,7 @@ class PHPExcel_Writer_Excel5_Worksheet extends PHPExcel_Writer_Excel5_BIFFwriter
         }
         */
 
-        $recordData = PHPExcel_Shared_String::UTF8toBIFF8UnicodeLong($this->phpSheet->getHeaderFooter()->getOddFooter());
+        $recordData = PHPExcel_Shared_String::gbktoBIFF8UnicodeLong($this->phpSheet->getHeaderFooter()->getOddFooter());
         $length = strlen($recordData);
 
         $header    = pack("vv", $record, $length);
@@ -2891,22 +2891,22 @@ class PHPExcel_Writer_Excel5_Worksheet extends PHPExcel_Writer_Excel5_BIFFwriter
                 // prompt title
                 $promptTitle = $dataValidation->getPromptTitle() !== '' ?
                     $dataValidation->getPromptTitle() : chr(0);
-                $data .= PHPExcel_Shared_String::UTF8toBIFF8UnicodeLong($promptTitle);
+                $data .= PHPExcel_Shared_String::gbktoBIFF8UnicodeLong($promptTitle);
 
                 // error title
                 $errorTitle = $dataValidation->getErrorTitle() !== '' ?
                     $dataValidation->getErrorTitle() : chr(0);
-                $data .= PHPExcel_Shared_String::UTF8toBIFF8UnicodeLong($errorTitle);
+                $data .= PHPExcel_Shared_String::gbktoBIFF8UnicodeLong($errorTitle);
 
                 // prompt text
                 $prompt = $dataValidation->getPrompt() !== '' ?
                     $dataValidation->getPrompt() : chr(0);
-                $data .= PHPExcel_Shared_String::UTF8toBIFF8UnicodeLong($prompt);
+                $data .= PHPExcel_Shared_String::gbktoBIFF8UnicodeLong($prompt);
 
                 // error text
                 $error = $dataValidation->getError() !== '' ?
                     $dataValidation->getError() : chr(0);
-                $data .= PHPExcel_Shared_String::UTF8toBIFF8UnicodeLong($error);
+                $data .= PHPExcel_Shared_String::gbktoBIFF8UnicodeLong($error);
 
                 // formula 1
                 try {
@@ -3182,7 +3182,7 @@ class PHPExcel_Writer_Excel5_Worksheet extends PHPExcel_Writer_Excel5_BIFFwriter
                 $dataBlockFont =  pack('VVVVVVVV', 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000);
                 $dataBlockFont .= pack('VVVVVVVV', 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000);
             } else {
-                $dataBlockFont = PHPExcel_Shared_String::UTF8toBIFF8UnicodeLong($conditional->getStyle()->getFont()->getName());
+                $dataBlockFont = PHPExcel_Shared_String::gbktoBIFF8UnicodeLong($conditional->getStyle()->getFont()->getName());
             }
             // Font Size
             if ($conditional->getStyle()->getFont()->getSize() == null) {

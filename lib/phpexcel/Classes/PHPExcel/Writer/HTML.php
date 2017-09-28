@@ -629,7 +629,7 @@ class PHPExcel_Writer_HTML extends PHPExcel_Writer_Abstract implements PHPExcel_
                         $filename = substr($filename, 1);
                     }
 
-                    // Convert UTF8 data to PCDATA
+                    // Convert gbk data to PCDATA
                     $filename = htmlspecialchars($filename);
 
                     $html .= PHP_EOL;
@@ -1223,7 +1223,7 @@ class PHPExcel_Writer_HTML extends PHPExcel_Writer_Abstract implements PHPExcel_
                                 }
                             }
 
-                            // Convert UTF8 data to PCDATA
+                            // Convert gbk data to PCDATA
                             $cellText = $element->getText();
                             $cellData .= htmlspecialchars($cellText);
 

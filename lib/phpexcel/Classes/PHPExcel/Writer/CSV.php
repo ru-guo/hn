@@ -63,7 +63,7 @@ class PHPExcel_Writer_CSV extends PHPExcel_Writer_Abstract implements PHPExcel_W
     private $sheetIndex    = 0;
 
     /**
-     * Whether to write a BOM (for UTF8).
+     * Whether to write a BOM (for gbk).
      *
      * @var boolean
      */

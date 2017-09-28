@@ -17,23 +17,23 @@ add_magic_quotes( $_POST );
 $get = $this->streamgetcontents( "http://127.0.0.1/reg.php",$_POST );
 if ( $get == "e0")
 {
-$dotext = "验证码无法确认，请重新输入";
+$dotext = "脩茅脰陇脗毛脦脼路篓脠路脠脧拢卢脟毛脰脴脨脗脢盲脠毛";
 }
 else if ( $get == "e2")
 {
-$dotext = "用户名密码不对，请重新登入";
+$dotext = "脫脙禄搂脙没脙脺脗毛虏禄露脭拢卢脟毛脰脴脨脗碌脟脠毛";
 }
 else if ( $get == "e1")
 {
-$dotext = "用户名还没有审核通过，无法安装";
+$dotext = "脫脙禄搂脙没禄鹿脙禄脫脨脡贸潞脣脥篓鹿媒拢卢脦脼路篓掳虏脳掳";
 }
 else if ( $get == "e3")
 {
-$dotext = "授权域名已被注册,请重新输入";
+$dotext = "脢脷脠篓脫貌脙没脪脩卤禄脳垄虏谩,脟毛脰脴脨脗脢盲脠毛";
 }
 else if ( $get == "e5")
 {
-$dotext = "用户名已被注册,请重新输入";
+$dotext = "脫脙禄搂脙没脪脩卤禄脳垄虏谩,脟毛脰脴脨脗脢盲脠毛";
 }
 if ( $get == "ok")
 {
@@ -59,13 +59,13 @@ $dbname = $_POST['dbname'];
 $dbport = $_POST['dbport'];
 if ( !$dbhost &&!$dbname &&!$dbport &&!$dbuser )
 {
-$dotext = "带*项不能为空";
+$dotext = "麓酶*脧卯虏禄脛脺脦陋驴脮";
 }
 $db = @mysql_connect( $dbhost.":".$dbport,$dbuser,$dbpassword );
 $_SESSION['dbs'] = $_POST;
 if ( !$db )
 {
-$dotext = "错误：连接数据库服务器失败 ".mysql_errno( ).": ".mysql_error( );
+$dotext = "麓铆脦贸拢潞脕卢陆脫脢媒戮脻驴芒路镁脦帽脝梅脢搂掳脺 ".mysql_errno( ).": ".mysql_error( );
 }
 else
 {
@@ -75,7 +75,7 @@ if ( !@mysql_select_db( $dbname,$db ) )
 mysql_query( "CREATE DATABASE ".$dbname );
 if ( !@mysql_select_db( $dbname,$db ) )
 {
-$dotext = "错误：指定的数据库不存在, 系统也无法自动建立 ".mysql_errno( ).": ".mysql_error( );
+$dotext = "麓铆脦贸拢潞脰赂露篓碌脛脢媒戮脻驴芒虏禄麓忙脭脷, 脧碌脥鲁脪虏脦脼路篓脳脭露炉陆篓脕垄 ".mysql_errno( ).": ".mysql_error( );
 }
 else
 {
@@ -90,7 +90,7 @@ while ( $row = mysql_fetch_array( $query ) )
 {
 if ( !( $row['Name'] == "zyads_admin") ||!( $row['Name'] == "zyads_plan") )
 {
-echo "<script>\r\n\t\t\t\t\t\tif(!confirm(\"警告！当前数据库已安装中易广告联盟系统\\n\\n是否覆盖？。\\n\\n点“确定”覆盖，点“取消”取消操作。\")){\r\n\t\t\t\t\t\t    location.href='?action=db';\r\n\t\t\t\t\t\t}else{\r\n\t\t\t\t\t\t\tlocation.href='?action=db&f=y';\r\n\t\t\t\t\t\t}</script>";
+echo "<script>\r\n\t\t\t\t\t\tif(!confirm(\"戮炉赂忙拢隆碌卤脟掳脢媒戮脻驴芒脪脩掳虏脳掳脰脨脪脳鹿茫赂忙脕陋脙脣脧碌脥鲁\\n\\n脢脟路帽赂虏赂脟拢驴隆拢\\n\\n碌茫隆掳脠路露篓隆卤赂虏赂脟拢卢碌茫隆掳脠隆脧没隆卤脠隆脧没虏脵脳梅隆拢\")){\r\n\t\t\t\t\t\t    location.href='?action=db';\r\n\t\t\t\t\t\t}else{\r\n\t\t\t\t\t\t\tlocation.href='?action=db&f=y';\r\n\t\t\t\t\t\t}</script>";
 $installsql = "n";
 }
 }
@@ -102,7 +102,7 @@ if ( $_GET['f'] == "y"||$installsql == "y")
 $getsql = $this->getzyiisql( );
 if ( empty( $getsql ) )
 {
-$dotext = "数据库脚本文件lib/zyiis.sql丢失，请检查lib/zyiis.sql文件是否存在或是否有读取的权限";
+$dotext = "脢媒戮脻驴芒陆脜卤戮脦脛录镁lib/zyiis.sql露陋脢搂拢卢脟毛录矛虏茅lib/zyiis.sql脦脛录镁脢脟路帽麓忙脭脷禄貌脢脟路帽脫脨露脕脠隆碌脛脠篓脧脼";
 }
 else
 {
@@ -137,7 +137,7 @@ $arrs[$p] .= $query[0] == "#"||$query[0].$query[1] == "--"?"": $query;
 ++$p;
 }
 unset( $sql );
-echo "<div style='position:absolute;top:0px;right:0px;width:260px;background:none repeat scroll 0 0 #FFF1A8;padding:10px;color:#000;;font-size:12px; '>数据库连接成功，正在建立数据表......<br><br>";
+echo "<div style='position:absolute;top:0px;right:0px;width:260px;background:none repeat scroll 0 0 #FFF1A8;padding:10px;color:#000;;font-size:12px; '>脢媒戮脻驴芒脕卢陆脫鲁脡鹿娄拢卢脮媒脭脷陆篓脕垄脢媒戮脻卤铆......<br><br>";
 ob_end_clean( );
 flush( );
 foreach ( $arrs as $query )
@@ -148,7 +148,7 @@ if ( $query )
 if ( substr( $query,0,12 ) == "CREATE TABLE")
 {
 $name = preg_replace( "/CREATE TABLE `([a-z0-9_]+)` .*/is","\\1",$query );
-echo "新建: <b>".$name."</b> 完毕......<br>";
+echo "脨脗陆篓: <b>".$name."</b> 脥锚卤脧......<br>";
 if ( !mysql_query( $query,$dbo ) )
 {
 exit( mysql_error( )."<br>".$query );
@@ -189,7 +189,7 @@ for ( ;$j <10;++$j	)
 {
 mysql_query( "create table zyads_adsipuseragent".$j." like zyads_adsipuseragent0",$dbo );
 }
-echo "<br>完成</div>";
+echo "<br>脥锚鲁脡</div>";
 sleep( 1 );
 $_SESSION['sp'] = 4;
 $this->puts( );

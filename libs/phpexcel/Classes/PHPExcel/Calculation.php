@@ -11,7 +11,7 @@ if (!defined('PHPEXCEL_ROOT')) {
 
 if (!defined('CALCULATION_REGEXP_CELLREF')) {
     //    Test for support of \P (multibyte options) in PCRE
-    if (defined('PREG_BAD_UTF8_ERROR')) {
+    if (defined('PREG_BAD_gbk_ERROR')) {
         //    Cell reference (cell or range of cells, with or without a sheet reference)
         define('CALCULATION_REGEXP_CELLREF', '((([^\s,!&%^\/\*\+<>=-]*)|(\'[^\']*\')|(\"[^\"]*\"))!)?\$?([a-z]{1,3})\$?(\d{1,7})');
         //    Named Range of cells

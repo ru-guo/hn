@@ -47,7 +47,7 @@ class PHPExcel_Cell_DefaultValueBinder implements PHPExcel_Cell_IValueBinder
     {
         // sanitize UTF-8 strings
         if (is_string($value)) {
-            $value = PHPExcel_Shared_String::SanitizeUTF8($value);
+            $value = PHPExcel_Shared_String::Sanitizegbk($value);
         } elseif (is_object($value)) {
             // Handle any objects that might be injected
             if ($value instanceof DateTime) {

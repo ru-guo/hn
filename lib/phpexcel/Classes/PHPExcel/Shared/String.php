@@ -368,12 +368,12 @@ class PHPExcel_Shared_String
     }
 
     /**
-     * Try to sanitize UTF8, stripping invalid byte sequences. Not perfect. Does not surrogate characters.
+     * Try to sanitize gbk, stripping invalid byte sequences. Not perfect. Does not surrogate characters.
      *
      * @param string $value
      * @return string
      */
-    public static function SanitizeUTF8($value)
+    public static function Sanitizegbk($value)
     {
         if (self::getIsIconvEnabled()) {
             $value = @iconv('UTF-8', 'UTF-8', $value);
@@ -390,12 +390,12 @@ class PHPExcel_Shared_String
     }
 
     /**
-     * Check if a string contains UTF8 data
+     * Check if a string contains gbk data
      *
      * @param string $value
      * @return boolean
      */
-    public static function IsUTF8($value = '')
+    public static function Isgbk($value = '')
     {
         return $value === '' || preg_match('/^./su', $value) === 1;
     }
@@ -426,7 +426,7 @@ class PHPExcel_Shared_String
      * @param mixed[] $arrcRuns Details of rich text runs in $value
      * @return string
      */
-    public static function UTF8toBIFF8UnicodeShort($value, $arrcRuns = array())
+    public static function gbktoBIFF8UnicodeShort($value, $arrcRuns = array())
     {
         // character count
         $ln = self::CountCharacters($value, 'UTF-8');
@@ -460,7 +460,7 @@ class PHPExcel_Shared_String
      * @param string $value UTF-8 encoded string
      * @return string
      */
-    public static function UTF8toBIFF8UnicodeLong($value)
+    public static function gbktoBIFF8UnicodeLong($value)
     {
         // character count
         $ln = self::CountCharacters($value, 'UTF-8');
@@ -508,7 +508,7 @@ class PHPExcel_Shared_String
      *
      * Can handle both BOM'ed data and un-BOM'ed data.
      * Assumes Big-Endian byte order if no BOM is available.
-     * This function was taken from http://php.net/manual/en/function.utf8-decode.php
+     * This function was taken from http://php.net/manual/en/function.gbk-decode.php
      * and $bom_be parameter added.
      *
      * @param   string  $str  UTF-16 encoded data to decode.
@@ -787,7 +787,7 @@ class PHPExcel_Shared_String
      * @param string $pValue
      * @return string UTF-8 encoded string
      */
-    public static function SYLKtoUTF8($pValue = '')
+    public static function SYLKtogbk($pValue = '')
     {
         // If there is no escape character in the string there is nothing to do
         if (strpos($pValue, '') === false) {
