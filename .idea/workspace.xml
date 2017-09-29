@@ -2,176 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="190739f7-da08-477e-a047-136957ef2cbb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/dberrorlog.20170928.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/dberrortime.20170928.log" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/advertiser/--e.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/404.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/administrator.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/adminlog.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/ads.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/adsip.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/adstype.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/ajaxcontent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/audit.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/charts/amcharts_key.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/charts/fonts/arial.fla" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/charts/fonts/arial.swf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/charts/fonts/garamond.swf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/charts/fonts/georgia.swf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/charts/fonts/tahoma.fla" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/charts/fonts/tahoma.swf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/charts/fonts/times new roman.swf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/charts/line.swf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/charts/line_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/charts/plugins/value_indicator.swf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/charts/swfobject.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/createads.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/createplan.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/db.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/edituser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/email.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/exchange.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/footer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/header.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/help.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/helps.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/3b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/3b1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/3h.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/3h1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/active.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/add.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/addcity.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/admin.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/admin_logo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/alexa.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/black-b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/black-pay.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/black.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/bleeds.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/bulb.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/date.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/edit.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/email.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/error.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/excel.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/excel1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/excel2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/excel3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/excel4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/excel5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/html.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/ic1.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/ico-bj.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/ico_error_16.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/ico_success_16.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/icon-ads.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/icon-index.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/icon-others.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/icon-plan.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/icon-settings.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/icon-stats.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/icon-users.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/inactive.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/info.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/ip.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/lock.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/login-bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/login-post.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/login-top.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/menu-bg1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/menu-bj.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/news.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/onlpay.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/page.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/plan.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/pm.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/r1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/r2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/r3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/r4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/r5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/r6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/r7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/r8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/removecity.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/s0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/s1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/s2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/s3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/sitetype-sell-h.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/sitetype-sell.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/submit-x.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/submit.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/tabs.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/tabs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/text1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/tip.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/today.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/tomonth.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/tools-content.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/top-bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/toweek.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/user.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/users.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/users1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/images/zb.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/import.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/integral.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/loginlog.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/news.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/no.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/onlinepay.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/orders.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/pay.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/plan.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/pm.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/scan.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/setting.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/showads.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/site.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/siteinfo.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/sitetype.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/stats.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/statsads.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/statsuser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/statszone.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/tracking.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/trend.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/trenddata.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/upadslog.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/users.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/admin/zone.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/faq.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/message.lang.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/xdmin/ads.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/xdmin/adsip.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/xdmin/adstype.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/xdmin/ajaxcontent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/xdmin/audit.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/xdmin/createads.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/xdmin/createplan.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/xdmin/edituser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/xdmin/exchange.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/xdmin/footer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/xdmin/header.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/xdmin/integral.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/xdmin/plan.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/xdmin/showads.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templatess/xdmin/users.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/controller/index.php" afterPath="$PROJECT_DIR$/apps/controller/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.php" afterPath="$PROJECT_DIR$/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conn.php" afterPath="$PROJECT_DIR$/conn.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/advertiser/footer.php" afterPath="$PROJECT_DIR$/templates/advertiser/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/advertiser/userinfo.php" afterPath="$PROJECT_DIR$/templates/advertiser/userinfo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.php" afterPath="$PROJECT_DIR$/settings.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -192,7 +24,28 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/settings.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="107" column="35" lean-forward="false" selection-start-line="107" selection-start-column="35" selection-end-line="107" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -237,6 +90,7 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/templates/advertiser/userinfo.php" />
         <option value="$PROJECT_DIR$/v7/dos.php" />
+        <option value="$PROJECT_DIR$/settings.php" />
       </list>
     </option>
   </component>
@@ -254,7 +108,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="81" />
     <option name="width" value="1562" />
     <option name="height" value="1100" />
@@ -325,15 +179,16 @@
       <workItem from="1506649404925" duration="3454000" />
       <workItem from="1506654530932" duration="2623000" />
       <workItem from="1506657855094" duration="82000" />
-      <workItem from="1506658495872" duration="691000" />
+      <workItem from="1506658495872" duration="2238000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33725000" />
+    <option name="totallyTimeSpent" value="35272000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1380597" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -342,7 +197,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34494016" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34494016" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -606,13 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/advertiser/userinfo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1620">
@@ -701,10 +549,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/settings.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="42" column="30" lean-forward="true" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+        <state relative-caret-position="408">
+          <caret line="107" column="35" lean-forward="false" selection-start-line="107" selection-start-column="35" selection-end-line="107" selection-end-column="35" />
           <folding />
         </state>
       </provider>
