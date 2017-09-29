@@ -27,10 +27,10 @@ define('UI','UI');
 
 /******** Mysql 配置 *********/
 $GLOBALS['C_MYSQL'] = array(
-	'dbhost' => '118.190.159.240',	//主机名
+	'dbhost' => 'localhost',	//主机名
 	'dbport' => '3306',		//连接端口
 	'dbuser' => 'root',		//数据库用户名
-	'dbpsw' => '123456',		//数据库密码
+	'dbpsw' => 'root',		//数据库密码
 	'dbname' => 'zygg',		//数据库表名
 	'charset' => 'gbk',		//连接字符集
 	'sqlmode' => '1'		//MYSQL sql-mode开关 0=关闭 1=开启 

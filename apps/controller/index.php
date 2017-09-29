@@ -219,6 +219,7 @@ class Controller_Index
 	public function actionregsave()
 	{
 		$uid = uc_user_register($_POST['username'], $_POST['password'], $_POST['email']);
+		echo $uid;die();
 		$usercla = Z::getsingleton("model_userclass");
 		$reguser = $usercla->registeruser();
 	}

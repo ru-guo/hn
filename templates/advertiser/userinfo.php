@@ -68,7 +68,7 @@ include TPL_DIR . "/header.php";?>
     <br />
     <input type="button" value=" È· ¶¨ " onclick="return upPost()" />
   </form>
-  <? }  else {?>
+  <?php }  else {?>
   <h2> ÐÞ¸ÄÃÜÂë </h2>
   <form action="?action=uppasswdpost" method="post" name="uppasswdpost" id="uppasswdpost">
     <table width="90%" border="0" cellpadding="0" cellspacing="0">
