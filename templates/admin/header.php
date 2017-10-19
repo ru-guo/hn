@@ -23,7 +23,7 @@ if ($action == "setting") {
 }
 echo "> <img src=\"/templates/";
 echo Z_TPL;
-echo "/images/icon-settings.jpg\" border=\"0\"> <span class=\"text\">基本设置</span></a></li>\r\n      <li><a href=\"do.php?action=affiliate\"  ";
+echo "/images/icon-settings.jpg\" border=\"0\"> <span class=\"text\">基本设置</span></a></li>\r\n      <li><a href=\"do.php?action=advertiser\"  ";
 if (in_array($action, array(
     "affiliate",
     "advertiser",
@@ -79,7 +79,7 @@ if (in_array($action, array(
 }
 echo "> <img src=\"/templates/";
 echo Z_TPL;
-echo "/images/icon-stats.jpg\" border=\"0\"><span class=\"text\"> 数据报表</span></a></li>\r\n      <li><a href=\"do.php?action=site\" ";
+echo "/images/icon-stats.jpg\" border=\"0\"><span class=\"text\"> 数据报表</span></a></li>\r\n      <li style='display: none;'><a href=\"do.php?action=site\" ";
 if (in_array($action, array(
     "site",
     "zone"
@@ -108,7 +108,7 @@ echo $_SESSION['adminusername'];
 echo "</strong> \r\n    30分钟结算: <span id='horusum'>统计中...</span> 次  上次登录: ";
 echo $_SESSION['l_ip'];
 echo convertip($_SESSION['l_ip']);
-echo " | <a  href=\"do.php?action=index\"><font color=\"#FFFFFF\">后台首页</font></a> | <a href=\"/\" target=\"_blank\"><font color=\"#FFFFFF\">联盟首页</font></a> | <!--a  href=\"index2.php\"><font color=\"#FFFFFF\">统计报表</font></a--><a class=\"s0\" href=\"/index.php?action=logout\"><font color=\"#FFFFFF\">退出</font></a></div>\r\n  <div id=\"fast-tools\" onselectstart =\"return false\" > <span >快速通道</span> </div>\r\n  <div id=\"fast-pay\"> <a href=\"do.php?action=pay\" style=\"color:#FFFFFF\"><span>财务管理</span></a> </div>\r\n  <div id=\"tools-content\">\r\n    <ul>\r\n      <li><a href=\"do.php?action=news&actiontype=add&TB_iframe=true&height=250&width=600\"  title=\"发布公告\" class=\"thickbox\"> <img src=\"/templates/";
+echo " | <a  href=\"do.php?action=index\"><font color=\"#FFFFFF\">后台首页</font></a> | <a href=\"/\" target=\"_blank\"><font color=\"#FFFFFF\">联盟首页</font></a> | <!--a  href=\"index2.php\"><font color=\"#FFFFFF\">统计报表</font></a--><a class=\"s0\" href=\"/index.php?action=logout\"><font color=\"#FFFFFF\">退出</font></a></div>\r\n  <div id=\"fast-tools\" onselectstart =\"return false\" > <span >快速通道</span> </div>\r\n  <div id=\"fast-pay\" style='display: none'> <a href=\"do.php?action=pay\" style=\"color:#FFFFFF\"><span>财务管理</span></a> </div>\r\n  <div id=\"tools-content\">\r\n    <ul>\r\n      <li><a href=\"do.php?action=news&actiontype=add&TB_iframe=true&height=250&width=600\"  title=\"发布公告\" class=\"thickbox\"> <img src=\"/templates/";
 echo Z_TPL;
 echo "/images/news.jpg\" border=\"0\"><span>发布新的公告<span></a></li>\r\n      <li><a href=\"/integral/do.php?action=adsip&timerange=";
 echo DAYS;
@@ -205,7 +205,7 @@ if (in_array($_GET['action'], array(
     } else {
         echo "link";
     }
-    echo "\"> <a   href=\"do.php?action=affiliate\"><span>网站主</span></a> </li>\r\n                    <li class=\"";
+    echo "\"> <a   href=\"do.php?action=affiliate\"><span>渠道提供商</span></a> </li>\r\n                    <li class=\"";
     if ($action == "advertiser") {
         echo "active";
     } else {
@@ -457,7 +457,7 @@ if (in_array($_GET['action'], array(
     } else {
         echo "link";
     }
-    echo "\"> <a   href=\"/integral/do.php?action=integral\"><span>积分兑奖</span></a> </li>\r\n                    <li class=\"";
+    echo "\"> <a   href=\"/integral/do.php?action=integral\" style='display: none;'><span>积分兑奖</span></a> </li>\r\n                    <li class=\"";
     if ($action == "sitetype") {
         echo "active";
     } else {

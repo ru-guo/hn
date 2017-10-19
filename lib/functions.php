@@ -10,8 +10,9 @@
 +---------------------------------------------------------------------------+
 $Id: config.php 30 2009-08-10 07:14:27Z jian@zyiis.com $
 */
-// ini_set('display_errors', 'On');
-// error_reporting(E_ALL &~E_NOTICE);
+ini_set('display_errors',1);            //错误信息
+ini_set('display_startup_errors',1);    //php启动错误信息
+error_reporting(E_ERROR);
 function stripslashes_deep( $value ){
 		$value = is_array( $value ) ? array_map( "stripslashes_deep", $value ) : stripslashes( $value );
 		return $value;
@@ -57,7 +58,7 @@ function url( $v )
 				return $v;
 		}
 		$parse_url = parse_url( $v );
-		parse_str( $parse_url['query'], &$output );
+		parse_str( $parse_url['query'], $output );
 		$u = "/".UI."/".$output['action'];
 		if ( $output['id'] )
 		{
@@ -130,7 +131,7 @@ function pregdate( $day )
 		return FALSE;
 }
 
-function add_magic_quotes( &$array )
+function add_magic_quotes( $array )
 {
 		foreach ( ( array )$array as $key => $value )
 		{
@@ -155,11 +156,11 @@ function add_magic_quotes( &$array )
 
 function trans( $string )
 {
-		$string = str_replace( array( "&lt;", "&gt;", "&quot;", "&#39;" ), array( "<", ">", "\"", "'" ), $string );
+		$string = str_replace( array( "lt;", "gt;", "quot;", "#39;" ), array( "<", ">", "\"", "'" ), $string );
 		return $string;
 }
 
-function recv( &$value )
+function recv( $value )
 {
 		if ( is_array( $value ) )
 		{
@@ -172,9 +173,9 @@ function recv( &$value )
 		if ( !is_numeric( $value ) )
 		{
 				$value = preg_replace( "/[\\x00-\\x08\\x0B\\x0C\\x0E-\\x1F]/", "", $value );
-				$value = str_replace( array( "%3C", "<" ), "&lt;", $value );
-				$value = str_replace( array( "%3E", ">" ), "&gt;", $value );
-				$value = str_replace( array( "\"", "'", "\t" ), array( "&quot;", "&#39;", "    " ), $value );
+				$value = str_replace( array( "%3C", "<" ), "lt;", $value );
+				$value = str_replace( array( "%3E", ">" ), "gt;", $value );
+				$value = str_replace( array( "\"", "'", "\t" ), array( "quot;", "#39;", "    " ), $value );
 				$value = str_ireplace( array( "char(", "load_file", "select", "update%", "update%", "update ", "insert", "delete", "zyads", "%00", "\\0", "\\r", "\\x1a", "/*" ), "", $value );
 		}
 		return $value;
@@ -218,7 +219,7 @@ function isweekday( $j )
 
 function ffsockopen( $url, $content, $post = 80, $timeout = 10, $mode = TRUE )
 {
-		$fp = @fsockopen( $url, $port, &$errno, &$errstr, $timeout );
+		$fp = @fsockopen( $url, $port, $errno, $errstr, $timeout );
 		if ( !$fp )
 		{
 				return "";
@@ -230,7 +231,7 @@ function ffsockopen( $url, $content, $post = 80, $timeout = 10, $mode = TRUE )
 		return "";
 		do
 		{
-		} while ( $status['timed_out'] && !feof( $fp ) || ( $header = @fgets( $fp ) ) && !( $header == "\r\n" ) || $header == "\n" );
+		} while ( !feof( $fp ) || !( $header == "\r\n" ) || $header == "\n" );
 		$stop = FALSE;
 		while ( !feof( $fp ) || !$stop )
 		{
@@ -254,7 +255,7 @@ function ffsockopen( $url, $content, $post = 80, $timeout = 10, $mode = TRUE )
 
 function build_query( $url, $dir, $content, $post = 80, $timeout = 10 )
 {
-		$string = http_build_query( $content, "", "&" );
+		$string = http_build_query( $content, "", "" );
 		$text = "POST ".$dir." HTTP/1.0\r\n";
 		$text .= "Host: ".$url."\r\n";
 		$text .= "Content-Length: ".strlen( $string )."\r\n";
@@ -291,7 +292,7 @@ function dump( $value, $string = "", $bool = FALSE )
 
 function t( $string )
 {
-		return nl2br( str_replace( " ", "&nbsp;", htmlspecialchars( $string ) ) );
+		return nl2br( str_replace( " ", "nbsp;", htmlspecialchars( $string ) ) );
 }
 
 function h( $value )
@@ -353,15 +354,15 @@ function getdomain( $v )
 		$ep = "ac,ah,biz,bj,cc,com,cq,edu,fj,gd,gov,gs,gx,gz,ha,hb,he,hi,hk,hl,hn,info,io,jl,js,jx,ln,mo,mobi,net,nm,nx,org,qh,sc,sd,sh,sn,sx,tj,tm,travel,tv,tw,ws,xj,xz,yn,zj";
 		$stuff = explode( ".", $v );
 		$stuff2 = explode( ",", $ep );
-		$stend = end( &$stuff );
-		$stpre = prev( &$stuff );
+		$stend = end( $stuff );
+		$stpre = prev( $stuff );
 		if ( in_array( $stpre, $stuff2 ) )
 		{
 				if ( count( $stuff ) == 2 )
 				{
 						$prefix = "www";
 				}
-				$xx = prev( &$stuff )."{$prefix}.";
+				$xx = prev( $stuff )."{$prefix}.";
 		}
 		return $xx.$stpre.".".$stend;
 }
@@ -463,7 +464,7 @@ function convertip( $ip )
 		return $qip[0];
 }
 
-function arraykeyformat( &$value )
+function arraykeyformat( $value )
 {
 		$value = "'".$value."'";
 		return $value;

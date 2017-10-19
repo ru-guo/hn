@@ -27,15 +27,15 @@ class Model_AdminClass
 				$password = $_POST['password'];
 				$aukey = md5( md5( $password.$username ) );
 				$checkcode = h( $_POST['checkcode'] );
-				$imgcode = Z::getsingleton( "ImgCode" );
+				//$imgcode = Z::getsingleton( "ImgCode" );
 				if ( $password == "" || $username == "" )
 				{
 						exit( "login_err" );
 				}
-				if ( !$imgcode->check( $checkcode ) )
-				{
-						exit( "checkcode" );
-				}
+//				if ( !$imgcode->check( $checkcode ) )
+//				{
+//						exit( "checkcode" );
+//				}
 				$sql = "SELECT username,password,loginip,logintime,status,usertype FROM zyads_admin\r\n\t\t\t\tWHERE username='".$username."'";
 				$onerow = $this->dbo->get_one( $sql );
 				$loginip = getip( );

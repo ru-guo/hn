@@ -1,6 +1,7 @@
 <?php
-#ini_set('display_errors', 'On');
-#error_reporting(7);
+ini_set('display_errors',1);            //错误信息
+ini_set('display_startup_errors',1);    //php启动错误信息
+error_reporting(-1);
 if ( !extension_loaded( "mysql" ) )
 {
 		exit( "无法载入 mysql 扩展，请检查 PHP 配置" );
@@ -26,6 +27,6 @@ define( "Z_TPL", "index/default");
 define( "TPL_DIR", P_TPL.Z_TPL );
 require( APP_DIR."/zyiis-app.php" );
 Z::import( APP_DIR );
-Zyiis::start( )->run( );
+Zyiis::start( )->run( );die('1');
 echo "\r\n";
 ?>

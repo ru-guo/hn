@@ -84,7 +84,7 @@ class Dispatcher
 						include( P_TPL."404.php" );
 						exit( );
 				}
-				$controller = new $class_name( $this );
+				$controller = new $class_name($this);
 				if ( method_exists( $controller, $action_method ) )
 				{
 						$zyiisa = $expzysa[0]."_".$expzysa[1];

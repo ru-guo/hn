@@ -319,10 +319,12 @@ class Model_UserClass extends Model_Ckuser
 		public function userauth( $u )
 		{
 				$answer = trim( $_POST['answer'] );
+
 				if ( $answer == $u['answer'] && $u['answer'] )
 				{
-						$newpassword = uniqid( rand( ) );
+						$newpassword = rand(0,100000);
 						$password = md5( $newpassword );
+
 						$sql = "UPDATE zyads_users SET\r\n    \t\t\t\tpassword='".$password."' Where username='".$u['username']."'";
 						$this->dbo->query( $sql );
 						$username = substr( $u['username'], 0, 3 )."***";
@@ -337,9 +339,11 @@ class Model_UserClass extends Model_Ckuser
 						);
 						$s = array( "{username}", "{sitename}", "{siteurl}", "{passwd}" );
 						$body = str_replace( $s, $r, $body );
-						sendmail( $u['email'], $subject['findpasswd'], $body );
+						echo $body;die();
+						sendmail( $u['email'], $subject['findpasswd'],$body );
 						return TRUE;
 				}
+
 				return FALSE;
 		}
 

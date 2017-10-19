@@ -6,7 +6,7 @@
 /*  Comment : 071223 */
 /*                   */
 /*********************/
-
+//var_dump($news);die();
 if ( !defined( "IN_ZYADS" ) )
 {
 		exit( );
@@ -56,7 +56,7 @@ foreach ( ( array )$news as $n )
 		echo "\" />                        </td>\r\n                        <td><font color=\"";
 		echo $n['color'];
 		echo "\">";
-		echo str( h( $n['tit'] ), 40 );
+		echo str(  $n['tit'] , 40 );
 		echo "</font></td>\r\n                        <td>";
 		echo str( strip_tags( $n['conn'] ), 50 );
 		echo "</td>\r\n                        <td>";

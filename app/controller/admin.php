@@ -216,6 +216,7 @@ class Controller_Admin
                 "id" => $value,
                 "news" => $adsnewsrow
             );
+
             Z::zrequire(TPL_DIR . "/news.php", $array);
         }
     }
@@ -410,6 +411,7 @@ class Controller_Admin
                 $referer = $_SERVER['HTTP_REFERER'];
                 $referer .= strstr($referer, "?") ? "" : "?";
                 $referer .= strstr($referer, "statetype") ? "" : "&statetype=success";
+                //echo $referer;die();
                 redirect($referer);
             } else if ($actiontype == "editusers") {
                 $parsesqr = $user->getusersuidrow();
@@ -1310,7 +1312,7 @@ class Controller_Admin
         $v = $this->unionurl . ("do.php?action=pay&status=" . $metadata . ("&searchval=" . $searchval . "&searchtype={$searchtype}&addtime={$addtime}"));
         $pager->url = $v;
         $parsesqls = $pager->parse_sqls($paylogsqlsandnum, $paycla->dbo);
-        $endparsestr = @end(&$parsesqls);
+        $endparsestr = @end($parsesqls);
         $paid = $endparsestr['id'];
         $navbar = $pager->navbar();
         $array = array(

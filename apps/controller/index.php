@@ -55,12 +55,14 @@ class Controller_Index
 				toplocation("index.php?action=message&t=answer_err");
 			}
 		}
+
 		if ($actiontype == "find") {
 			$f = $usermodel->userauth($u);
+
 			if ($f) {
-				toplocation("index.php?action=message&t=findpwd_succeed");
+				redirect("index.php?action=message&t=findpwd_succeed");
 			} else {
-				toplocation("index.php?action=message&t=answer_err");
+				redirect("/index.php?action=message&t=answer_err");
 			}
 		}
 		require(TPL_DIR . "/findpasswd.php");
@@ -218,8 +220,8 @@ class Controller_Index
 
 	public function actionregsave()
 	{
-		$uid = uc_user_register($_POST['username'], $_POST['password'], $_POST['email']);
-		echo $uid;die();
+//		$uid = uc_user_register($_POST['username'], $_POST['password'], $_POST['email']);
+//		echo $uid;die();
 		$usercla = Z::getsingleton("model_userclass");
 		$reguser = $usercla->registeruser();
 	}
@@ -245,14 +247,14 @@ class Controller_Index
 		$username = $usercla->eregusername($username);
 		$is = $usercla->getuidtousernamenum($username1);
 		if (!$username) {
-			echo json_encode(array("status" => 0));
+			echo '0';
 			exit();
 		}
-		if ($is) {
-			echo json_encode(array("status" => 1));
+		if (!$is) {
+			echo '1';
 			exit();
 		}
-		echo json_encode(array("status" => 0));
+		echo '0';
 		exit();
 	}
 

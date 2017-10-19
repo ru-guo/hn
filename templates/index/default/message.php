@@ -25,7 +25,7 @@ include P_TPL . "/message.lang.php";
             <?php } elseif($t == 'activate_succeed') {?>
             <img src="/templates/<?php echo Z_TPL?>/images/ok.jpg" alt="" align="absmiddle"/> <span style="font-size:14px">验证成功，请点击<a href="index.php?action=login" class="thickbox" title="用户登入"> 登录 </a>获取代码&nbsp; </span>
 			
-			 <?php } elseif($t == 'findpwd_succeed') {?>
+			 <?php } elseif($t == 'findpwd_succeed') { ?>
             <img src="/templates/<?php echo Z_TPL?>/images/ok.jpg" alt="" align="absmiddle"/> <span style="font-size:14px">系统成功接受了您的请求，新密码已发送到您的邮箱</span>
 			
 			<?php } elseif($t == 'answer_err') {?>

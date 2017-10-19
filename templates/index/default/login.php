@@ -3,6 +3,9 @@ include TPL_DIR . "/headerxin1.php";?>
 <title>会员登录_<?php echo $v["tit"] ?> <?php echo $GLOBALS['C_ZYIIS']['sitename']?></title>
 <link rel="stylesheet" href="/templates/index/default/css/xin/css.css" >
 <script src="/templates/index/default/css/xin/jquery-1.7.min.js"  type="text/javascript"></script>
+<link href="/templates/index/default/css/drag.css" rel="stylesheet" type="text/css">
+<script src="/templates/index/default/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="/templates/index/default/js/drag.js" type="text/javascript"></script>
 <div class="main" style="padding-top:30px">
   <form  method="post" action="http://<?php echo $GLOBALS['C_ZYIIS']['authorized_url']?>/i.php?action=postuserlogin" onSubmit="return doLogin()" style="margin-bottom: 0px;">
     <div class="left_list">
@@ -27,14 +30,12 @@ include TPL_DIR . "/headerxin1.php";?>
           <input type="password" class="input_text" name="password" id="password" placeholder="请输入密码" maxlength="20">
           <div class="tip" id="txt_password_tip"></div>
         </li>
-		<!---验证码--->
-              <li style="position:relative;">
-        <label><em class="red">*</em> 验证码：</label>
-          <input type="text" class="input_text" name="checkcode" id="img_code" placeholder="请输入验证码" maxlength="4">
-          <img src="http://<?php echo $GLOBALS['C_ZYIIS']['authorized_url']?>/index.php?action=imgcode"  alt= "看不清?请点击刷新验证码" align="absmiddle" id="varImg"  style= "cursor:pointer;"  onclick="refurbish();"/>
-          <div class="tip" id="img_code_tip" >验证码不正确</div>
-        </li>
-		<!---验证码--->
+        <li>   
+<center><div id="drag"></div></center>
+
+<script type="text/javascript">
+$('#drag').drag();
+</script></li>
                 <li>
           <label></label>
           <input type="submit" value="登入" class="btn_css" id="btn_username">
@@ -74,12 +75,12 @@ include TPL_DIR . "/headerxin1.php";?>
         return false;
      }
 	 $("#txt_password_tip").hide();	
-	 var img_code = $.trim($("#img_code").val());
-     if (img_code == "") {
-        $("#img_code_tip").html('验证码不能为空').show();
+	 	var username = $.trim($("#username").val());
+     if (username == "") {
+        $("#txt_username_tip").html('用户名不能为空').show();  
         return false;
      }
-	 $("#img_code_tip").hide();	
+   $(".drag_text").hide();
  	 
 } 
 </script> 

@@ -60,7 +60,7 @@ class Model_PlanClass
 				}
 				if ( is_array( $plantype ) && !empty( $plantype ) )
 				{
-						@array_walk( &$plantype, "ArrayKeyFormat" );
+						@array_walk( $plantype, "ArrayKeyFormat" );
 				}
 				$plantype = @implode( ",", ( array )$plantype );
 				$planid = ( integer )$_REQUEST['planid'];
@@ -323,7 +323,7 @@ class Model_PlanClass
 				$query = $this->dbo->create( $array, "zyads_plan" );
 				$planid = $this->dbo->insert_id( );
 				$j = 0;
-				while ( list( $key ) = each( &$acl ) )
+				while ( list( $key ) = each( $acl ) )
 				{
 						if ( $acl[$key]['isacl'] != "all" )
 						{
@@ -463,7 +463,7 @@ class Model_PlanClass
 //				}
 				$query = $this->dbo->query( "delete FROM `zyads_acls` WHERE planid=".$planid );
 				$j = 0;
-				while ( list( $key ) = each( &$acl ) )
+				while ( list( $key ) = each( $acl ) )
 				{
 						if ( $acl[$key]['isacl'] != "all" )
 						{
@@ -719,7 +719,7 @@ class Model_PlanClass
 				}
 				$query = $this->dbo->query( "delete FROM `zyads_acls` WHERE planid=".$planid );
 				$j = 0;
-				while ( list( $key ) = each( &$acl ) )
+				while ( list( $key ) = each( $acl ) )
 				{
 						if ( $acl[$key]['isacl'] != "all" )
 						{

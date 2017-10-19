@@ -134,6 +134,7 @@ class Db_MysqlClass
 				}
 				if ( !( $query = mysql_query( $sql, $dbconn ) ) )
 				{
+					echo $sql;
 						$this->errorlog( "MySQL Query Sql Error", $dbconn, $sql );
 						exit( "MySQL Query Sql Error  " );
 				}
@@ -238,7 +239,7 @@ class Db_MysqlClass
 				}
 				$str = implode( ",", array_keys( $array ) );
 				$value = array_values( $array );
-				array_walk( &$value, array(
+				array_walk( $value, array(
 						$this,
 						"fieldFormat"
 				) );

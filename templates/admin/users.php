@@ -270,7 +270,7 @@ if ( $action == "affiliate" )
 				}
 				echo "                        </td>\r\n                        <td>&nbsp;</td>\r\n                        <td colspan=\"11\"><span style=\"display:none\" id=\"e_";
 				echo $u['uid'];
-				echo "\"><a href=\"dos.php?action=";
+				echo "\"><a href=\"do.php?action=";
 				echo $action;
 				echo "&actiontype=editusers&uid=";
 				echo $u['uid'];
@@ -391,7 +391,7 @@ if ( $action == "advertiser" )
 				}
 				echo "</td>\r\n                        <td>&nbsp;</td>\r\n                        <td colspan=\"7\" ><span style=\"display:none\" id=\"e_";
 				echo $u['uid'];
-				echo "\"><a href=\"dos.php?action=";
+				echo "\"><a href=\"do.php?action=";
 				echo $action;
 				echo "&actiontype=editusers&uid=";
 				echo $u['uid'];
@@ -423,8 +423,8 @@ if ( $action == "advertiser" )
 				echo $u['uid'];
 				echo "\" title=\"查看\" >广告</a> | <a href=\"do.php?action=pm&actiontype=add&username=";
 				echo $u['username'];
-				echo "&TB_iframe=true&height=250&width=600\" title=\"发送消息\" class=\"thickbox\">发送短信</a> | <a href=\"do.php?action=users&actiontype=editusers&usertype=&uid=";
-				echo $u['uid'];
+			echo "&TB_iframe=true&height=250&width=600\" title=\"发送消息\" class=\"thickbox\">发送短信</a> | <a href=\"do.php?action=email&username=";
+			echo $u['username'];
 				echo "\" title=\"查看\" >发送邮件</a></span>&nbsp;</td>\r\n                        <td colspan=\"2\" align=\"right\">";
 				echo $u['logintime'] == "" ? "未登入" : substr( $u['logintime'], 0, 10 );
 				echo "</td>\r\n                        <td  class=\"td_b_5\">&nbsp;</td>\r\n                      </tr>\r\n                      ";
@@ -489,7 +489,7 @@ if ( $action == "service" || $action == "commercial" )
 						echo Z_TPL;
 						echo "/images/inactive.png' align='absmiddle' alt=\"非活跃\" />\r\n                          ";
 				}
-				echo "</td>\r\n                        <td><a href=\"dos.php?action=";
+				echo "</td>\r\n                        <td><a href=\"do.php?action=";
 				echo $action;
 				echo "&actiontype=editusers&uid=";
 				echo $u['uid'];

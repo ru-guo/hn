@@ -10,6 +10,9 @@
 +---------------------------------------------------------------------------+
 $Id: do.php 17 2008-08-25 18:34:30Z jian@zyiis.com $
 */
+ini_set('display_errors',1);            //错误信息
+ini_set('display_startup_errors',1);    //php启动错误信息
+error_reporting(E_ERROR);
 if($_SERVER['HTTP_USER_AGENT'] == '') die('NC');
 require '../conn.php';
 InstallLicense();

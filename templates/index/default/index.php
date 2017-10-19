@@ -207,7 +207,7 @@ $(".tab-pannel").stop().slideUp().eq($('.tab-nav li').index(this)).stop().slideD
       	  <li>
                  <span><font color="<?php if($emtime<$mtime) echo 'red'?>"></font>20<?php echo date("y-m-d",strtotime($n['time']));?></span>
 				   <a href="<?php echo url("?action=news&id=".$n['id']."")?>" title="<?php echo $n['tit']?>" class="adot"  target="_blank"><font color="<?php echo $n['color']?>" >
-                  <?php if($n['top'])echo "[置顶]";echo str(h($n['tit']),35);?>
+                  <?php if($n['top'])echo "[置顶]";echo str($n['tit'],35);?>
                   </font></a>
                           <?php if(!$n['top']){?>
 						          	
@@ -285,7 +285,7 @@ $tip1.prepend("[置顶]");
           <!--网站主-->
           
           <div class="boxRightWeb">
-        <h2 class="tit_h2">网站主客服</h2>
+        <h2 class="tit_h2">渠道商客服</h2>
         <ul>
               <li><span class="nickName">客服:</span><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1395550247&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:1395550247:51" alt="<?php echo $GLOBALS['C_ZYIIS']['sitename']?>客服" title="<?php echo $GLOBALS['C_ZYIIS']['sitename']?>客服"/></a></li>
               <li><span class="nickName">客服:</span><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1395550247&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:1395550247:51" alt="<?php echo $GLOBALS['C_ZYIIS']['sitename']?>客服" title="<?php echo $GLOBALS['C_ZYIIS']['sitename']?>客服"/></a></li>
@@ -312,12 +312,12 @@ $tip1.prepend("[置顶]");
     <div class="adv">
           <h3>合作媒体</h3>
           <ul>
-        <li><img src="templates/index/default/images/1-6.png" ></li>
-        <li><img src="templates/index/default/images/1-7.png" ></li>
-        <li><img src="templates/index/default/images/1-3.jpg" ></li>
-        <li><img src="templates/index/default/images/1-2.png" ></li>
-        <li><img src="templates/index/default/images/1-4.jpg" /></li>
-        <li><img src="templates/index/default/images/1-8.png" ></li>
+        <li><img src="templates/index/default/images/1-1.png" ></li>
+        <li><img src="templates/index/default/images/1-1.png" ></li>
+        <li><img src="templates/index/default/images/1-1.png" ></li>
+        <li><img src="templates/index/default/images/1-1.png" ></li>
+        <li><img src="templates/index/default/images/1-1.png" /></li>
+        <li><img src="templates/index/default/images/1-1.png" ></li>
           </ul>
         </div>
       </div>
@@ -326,10 +326,10 @@ $tip1.prepend("[置顶]");
       <h1 class="tit_h1"></h1>
       <div class="borderbox flow fl">
     <div class="link"><span>友情链接：</span>
-<a target="_blank" href="http://www.cpajia.com">APP推广平台</a> 
-<a target="_blank" href="#">广告联盟评测</a> 
+<a target="_blank" href="http://www.heiniubao.com/">黑牛保险</a>
+<a target="_blank" href="http://www.heiniubao.com/activity/dd_redirect1">黑牛福利社</a>
 <a target="_blank" href="#">广告联盟</a> 
-<a target="_blank" href="http://www.pj8.net">手机广告联盟</a> 
+<a target="_blank" href="#">手机广告联盟</a>
     </div>
   </div>
  </div>

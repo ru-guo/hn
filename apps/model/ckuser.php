@@ -17,6 +17,7 @@ class Model_Ckuser
 						return FALSE;
 				}
 				$sql = "Select uid From zyads_users Where username='".$username."' AND (type=1 OR type=2)";
+
 				return 0 < $this->dbo->get_num( $sql );
 		}
 

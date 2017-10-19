@@ -120,7 +120,7 @@ function a() {
 			 from.submit(); 
 		}
 		else{
-			alert('用户名出错');
+			alert(data);
 			return false;
 		}
 	});  

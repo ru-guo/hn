@@ -239,7 +239,7 @@ class Db_MysqlClass
 				}
 				$str = implode( ",", array_keys( $array ) );
 				$value = array_values( $array );
-				array_walk( &$value, array(
+				array_walk( $value, array(
 						$this,
 						"fieldFormat"
 				) );

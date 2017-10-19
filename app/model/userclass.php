@@ -47,16 +47,16 @@ class Model_UserClass extends Model_Ckuser
 		{
 				$username = h( trim( $_POST['username'] ) );
 				$password = md5( trim( $_POST['password'] ) );
-				$checkcode = h( $_POST['checkcode'] );
-				$imgcode = Z::getsingleton( "ImgCode" );
+				//$checkcode = h( $_POST['checkcode'] );
+				//$imgcode = Z::getsingleton( "ImgCode" );
 				if ( $password == "" || $username == "" )
 				{
 						message( "login_err" );
 				}
-				if ( ( $GLOBALS['C_ZYIIS']['check_code'] == "1" || 2 < $type ) && !$imgcode->check( $checkcode ) )
-				{
-						message( "checkcode" );
-				}
+//				if ( ( $GLOBALS['C_ZYIIS']['check_code'] == "1" || 2 < $type ) && !$imgcode->check( $checkcode ) )
+//				{
+//						message( "checkcode" );
+//				}
 				$condition = "";
 				if ( $type == 3 )
 				{
@@ -720,7 +720,8 @@ class Model_UserClass extends Model_Ckuser
 				$userinfo = $_POST['userinfo'];
 				$cpmpopmode = $_POST['cpmpopmode'];
 //				$advprice = $_POST['advprice'];
-				$sql = "Update zyads_users SET cpcdeduction='".$cpcdeduction.( "',\r\n    \t\t\t\tcpmdeduction='".$cpmdeduction."',\r\n    \t\t\t\tcpadeduction='{$cpadeduction}',\r\n    \t\t\t\tcpsdeduction='{$cpsdeduction}',\r\n    \t\t\t\tcpvdeduction='{$cpvdeduction}',\r\n    \t\t\t\tquestion = '" ).$_POST['question']."',\r\n\t\t\t\t\tanswer  = '".$_POST['answer']."',\r\n\t\t\t\t\tcontact  = '".$_POST['contact']."',\r\n\t\t\t\t\ttel     = '".$_POST['tel']."',\r\n\t\t\t\t\tmobile  = '".$_POST['mobile']."',\r\n\t\t\t\t\tqq = '".$_POST['qq']."',\r\n\t\t\t\t\temail = '".$_POST['email']."',\r\n\t\t\t\t\tcompany = '".$_POST['company']."',\r\n\t\t\t\t\tcompanyinfo = '".$_POST['company_info'].( "',\r\n    \t\t\t\tbank='".$bank.( "',\r\n    \t\t\t\trecpm='".$cpmpopmode."',bankname='{$bankname}',\r\n    \t\t\t\tbankacc='{$bankacc}',\r\n    \t\t\t\taccountname='{$accountname}',\r\n    \t\t\t\tpvstep='{$pvstep}',\r\n    \t\t\t\tstatus='{$statustype}',\r\n    \t\t\t\tuserinfo='{$userinfo}',\r\n    \t\t\t\tcpczlink='{$cpczlink}',\r\n    \t\t\t\tcpmzlink='{$cpmzlink}',\r\n    \t\t\t\tcpazlink='{$cpazlink}',\r\n    \t\t\t\tcpszlink='{$cpszlink}',\r\n    \t\t\t\tinsite='{$insite}',\r\n    \t\t\t\tserviceid='{$serviceid}',\r\n    \t\t\t\trecommend='{$recommend}' \r\n    \t\t\t\t{$password} Where uid={$nfuid}" ) );
+				$sql = "Update zyads_users SET cpcdeduction='".$cpcdeduction.( "',\r\n    \t\t\t\tcpmdeduction='".$cpmdeduction."',\r\n    \t\t\t\tcpadeduction='{$cpadeduction}',\r\n    \t\t\t\tcpsdeduction='{$cpsdeduction}',\r\n    \t\t\t\tcpvdeduction='{$cpvdeduction}',\r\n    \t\t\t\tquestion = '" ).$_POST['question']."',\r\n\t\t\t\t\tanswer  = '".$_POST['answer']."',\r\n\t\t\t\t\tcontact  = '".$_POST['contact']."',\r\n\t\t\t\t\ttel     = '".$_POST['tel']."',\r\n\t\t\t\t\tmobile  = '".$_POST['mobile']."',\r\n\t\t\t\t\tqq = '".$_POST['qq']."',\r\n\t\t\t\t\temail = '".$_POST['email']."',\r\n\t\t\t\t\tcompany = '".$_POST['company']."',\r\n\t\t\t\t\tcompanyinfo = '".$_POST['company_info'].( "',\r\n    \t\t\t\tbank='".$bank.( "',\r\n    \t\t\t\tbankname='{$bankname}',\r\n    \t\t\t\tbankacc='{$bankacc}',\r\n    \t\t\t\taccountname='{$accountname}',\r\n    \t\t\t\tpvstep='{$pvstep}',\r\n    \t\t\t\tstatus='{$statustype}',\r\n    \t\t\t\tuserinfo='{$userinfo}',\r\n    \t\t\t\tcpczlink='{$cpczlink}',\r\n    \t\t\t\tcpmzlink='{$cpmzlink}',\r\n    \t\t\t\tcpazlink='{$cpazlink}',\r\n    \t\t\t\tcpszlink='{$cpszlink}',\r\n    \t\t\t\tinsite='{$insite}',\r\n    \t\t\t\tserviceid='{$serviceid}',\r\n    \t\t\t\trecommend='{$recommend}' \r\n    \t\t\t\t{$password} Where uid={$nfuid}" ) );
+				//echo $sql;die();
 				$query = $this->dbo->query( $sql );
 				$this->delzoneidcache( $nfuid );
 		}

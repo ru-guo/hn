@@ -10,8 +10,9 @@
 +---------------------------------------------------------------------------+
 $Id: config.php 30 2009-08-10 07:14:27Z jian@zyiis.com $
 */
-ini_set('display_errors', 'On');
-error_reporting(7);
+ini_set('display_errors',1);            //错误信息
+ini_set('display_startup_errors',1);    //php启动错误信息
+error_reporting(E_ERROR);
 abstract class Z{
 
 		private static $config = array( );
@@ -79,7 +80,7 @@ abstract class Z{
 				Z::loadfile( $filename, $dir, TRUE );
 				if ( !class_exists( $classname, FALSE ) )
 				{
-						throw new ZException( "Class ".$classname.( " not defined in file ".$filename ) );
+						//throw new ZException( "Class ".$classname.( " not defined in file ".$filename ) );
 				}
 		}
 
